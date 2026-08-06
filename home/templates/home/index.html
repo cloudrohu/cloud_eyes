@@ -5,6 +5,51 @@
 
 {% block content %}
 
+<style>
+    .custom-scroll::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 20px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background: #0284c7;
+        border-radius: 20px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background: #0369a1;
+    }
+        /* Technology Slider Pagination */
+    .technologySwiper {
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    .technologySwiper .swiper-pagination {
+        position: absolute;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+
+    .technologySwiper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #cbd5e1;
+        opacity: 1;
+    }
+
+    .technologySwiper .swiper-pagination-bullet-active {
+        width: 28px;
+        border-radius: 20px;
+        background: #0284c7;
+    }
+</style>
+
 <!-- HERO SECTION START HERE -->
 <section class="pt-20">
 
@@ -427,9 +472,333 @@
 
 </section>
 
+<!-- WHY CHOOSE START HERE -->
+<section class="py-14 bg-sky-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+
+            <span class="text-sky-600 font-semibold uppercase tracking-[3px]">
+                Why Choose Us
+            </span>
+
+            <h2 class="mt-2 text-3xl lg:text-4xl font-bold text-gray-900">
+                Your Trusted Partner in Eye Care
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                We are committed to providing advanced eye care with experienced specialists,
+                modern technology, and compassionate service.
+            </p>
+
+        </div>
+
+        <!-- Content -->
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+            <!-- Image -->
+            <div>
+                <img src="{% static 'assets/images/why-choose-us.jpg' %}" alt="Why Choose Us" class="w-full rounded-xl shadow-md object-cover">
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-5 max-h-[420px] overflow-y-auto pr-3 custom-scroll">
+
+                <div class="border-l-4 border-sky-600 pl-5">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Experienced Eye Specialists
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Our skilled ophthalmologists provide personalized care using years of clinical expertise.
+                    </p>
+                </div>
+
+                <div class="border-l-4 border-sky-600 pl-5">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Advanced Diagnostic Technology
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Equipped with modern technology for accurate diagnosis and effective treatment.
+                    </p>
+                </div>
+
+                <div class="border-l-4 border-sky-600 pl-5">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Patient-Centered Care
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Every patient receives personalized attention in a comfortable and caring environment.
+                    </p>
+                </div>
+
+                <div class="border-l-4 border-sky-600 pl-5">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Affordable & Transparent Pricing
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Quality eye care with clear pricing and no hidden charges.
+                    </p>
+                </div>
+
+                
+
+                <div class="border-l-4 border-sky-600 pl-5">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Advanced Diagnostic Technology
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Equipped with modern technology for accurate diagnosis and effective treatment.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT DOCTOR START HERE -->                                                                                                            
+<section class="py-14 bg-white">
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <!-- Heading -->
+        <div class="text-center mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px] font-semibold">
+                Meet Our Surgeon
+            </span>                                                                                                     
+
+            <h2 class="mt-2 text-3xl font-bold text-gray-900">
+                Expert Care You Can Trust
+            </h2>
+
+        </div>
+
+        <!-- Doctor -->
+        <div class="bg-slate-50 rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row items-center gap-8">
+
+                <!-- Image -->
+                <img src="{% static 'assets/images/doctor_img.jpg' %}" class="w-56 h-56 rounded-md                                                                                                                                                                                                                                                                                                                                                                                   object-cover shrink-0">
+
+                <!-- Content -->
+                <div class="flex-1">
+
+                    <h3 class="text-3xl font-bold">
+                        Dr. John Smith
+                    </h3>
+
+                    <p class="text-sky-600 mt-2">
+                        Senior Consultant Ophthalmologist
+                    </p>
+
+                    <p class="text-gray-500 mt-1">
+                        MBBS • MS • FICO
+                    </p>
+
+                    <div class="flex flex-wrap gap-6 mt-5 text-sm">
+
+                        <span><strong>18+</strong> Years Experience</span>
+
+                        <span><strong>15K+</strong> Surgeries</span>
+
+                        <span><strong>99%</strong> Success Rate</span>
+
+                    </div>
+
+                    <p class="mt-5 text-gray-600 leading-7">
+                        Dedicated to providing advanced cataract, LASIK and retina care with modern technology and compassionate treatment.
+                    </p>
+
+                    <a href="#"
+                       class="inline-block mt-6 bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700 transition">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+        <!-- Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px] font-semibold">
+                Our Technology
+            </span>
+
+            <h2 class="mt-2 text-3xl lg:text-4xl font-bold">
+                Advanced Eye Care Technology
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                Equipped with modern diagnostic and surgical equipment
+                for precise and effective eye care.
+            </p>
+
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper technologySwiper relative pb-14">        
+
+            <div class="swiper-wrapper">
+
+                <!-- Repeat this card -->
+                <div class="swiper-slide">
+
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+
+                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
+                             class="w-full h-56 object-cover">
+
+                        <div class="p-5">
+
+                            <h3 class="text-xl font-semibold">
+                                OCT Scan
+                            </h3>
+
+                            <p class="mt-3 text-gray-600">
+                                High-resolution retinal imaging for
+                                accurate diagnosis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="swiper-slide">
+
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+
+                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
+                             class="w-full h-56 object-cover">
+
+                        <div class="p-5">
+
+                            <h3 class="text-xl font-semibold">
+                                OCT Scan
+                            </h3>
+
+                            <p class="mt-3 text-gray-600">
+                                High-resolution retinal imaging for
+                                accurate diagnosis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div class="swiper-slide">
+
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+
+                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
+                             class="w-full h-56 object-cover">
+
+                        <div class="p-5">
+
+                            <h3 class="text-xl font-semibold">
+                                OCT Scan
+                            </h3>
+
+                            <p class="mt-3 text-gray-600">
+                                High-resolution retinal imaging for
+                                accurate diagnosis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div class="swiper-slide">
+
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+
+                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
+                             class="w-full h-56 object-cover">
+
+                        <div class="p-5">
+
+                            <h3 class="text-xl font-semibold">
+                                OCT Scan
+                            </h3>
+
+                            <p class="mt-3 text-gray-600">
+                                High-resolution retinal imaging for
+                                accurate diagnosis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div class="swiper-slide">
+
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+
+                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
+                             class="w-full h-56 object-cover">
+
+                        <div class="p-5">
+
+                            <h3 class="text-xl font-semibold">
+                                OCT Scan
+                            </h3>
+
+                            <p class="mt-3 text-gray-600">
+                                High-resolution retinal imaging for
+                                accurate diagnosis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Hero Slider
     new Swiper(".heroSwiper", {
         loop: true,
 
@@ -439,14 +808,45 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         pagination: {
-            el: ".swiper-pagination",
+            el: ".heroSwiper .swiper-pagination",
             clickable: true,
         },
 
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".heroSwiper .swiper-button-next",
+            prevEl: ".heroSwiper .swiper-button-prev",
         },
+    });
+
+    // Technology Slider
+    new Swiper(".technologySwiper", {
+
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".technologySwiper .swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1280: {
+                slidesPerView: 4,
+            }
+        }
+
     });
 
 });
