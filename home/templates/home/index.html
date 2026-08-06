@@ -1,0 +1,455 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION START HERE -->
+<section class="pt-20">
+
+    <div class="swiper heroSwiper">
+
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide bg-gradient-to-r from-sky-50 to-white">
+
+                <div class="max-w-7xl mx-auto px-6 py-16">
+
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+                        <div class="text-center lg:text-left">
+
+                            <span class="bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold">
+                                Trusted Eye Care
+                            </span>
+
+                            <h1 class="mt-6 text-4xl lg:text-6xl font-bold">
+                                Your Vision,
+                                <span class="text-sky-600">Our Priority</span>
+                            </h1>
+
+                            <p class="mt-6 text-gray-600 text-lg">
+                                Comprehensive Eye Care with Modern Technology.
+                            </p>
+
+                            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+
+                                <a href="#"
+                                    class="bg-sky-600 text-white px-8 py-4 rounded-xl">
+
+                                    Book Appointment
+
+                                </a>
+
+                                <a href="tel:+919999999999"
+                                    class="border border-sky-600 text-sky-600 px-8 py-4 rounded-xl">
+
+                                    Call Now
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <img
+                                src="{% static 'assets/images/slider1.png' %}"
+                                class="w-full max-w-lg mx-auto">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide bg-gradient-to-r from-blue-50 to-white">
+
+                <div class="max-w-7xl mx-auto px-6 py-10 lg:py-14">
+
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+
+                        <!-- Content -->
+                        <div class="text-center lg:text-left">
+
+                            <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                                Freedom From
+                                <span class="text-sky-600">Glasses</span>
+                            </h1>
+
+                            <p class="mt-5 text-lg text-gray-600 leading-8 max-w-xl mx-auto lg:mx-0">
+                                Experience safe, advanced and painless LASIK surgery with
+                                cutting-edge technology for clear and natural vision.
+                            </p>
+
+                            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                                <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg transition">
+                                    Learn More
+                                </a>
+
+                                <a href="#appointment" class="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-8 py-3 rounded-lg transition">
+                                    Book Appointment
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+
+                            <img src="{% static 'assets/images/slider2.png' %}" alt="LASIK Surgery" class="w-full max-w-md lg:max-w-lg object-contain">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide bg-gradient-to-r from-cyan-50 to-white">
+
+                <div class="max-w-7xl mx-auto px-6 py-16">
+
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+                        <div>
+
+                            <span class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+                                Cataract Surgery
+                            </span>
+
+                            <h1 class="mt-6 text-4xl lg:text-6xl font-bold">
+
+                                Restore Your
+                                <span class="text-sky-600">
+                                    Clear Vision
+                                </span>
+
+                            </h1>
+
+                            <p class="mt-6 text-gray-600 text-lg">
+                                World-Class Cataract Surgery by Expert Doctors.
+                            </p>
+
+                            <a href="#"
+                                class="inline-block mt-8 bg-sky-600 text-white px-8 py-4 rounded-xl">
+
+                                Get Started
+
+                            </a>
+
+                        </div>
+
+                        <div>
+
+                            <img
+                                src="{% static 'assets/images/slider3.png' %}"
+                                class="w-full max-w-lg mx-auto">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION START HERE -->
+<section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+            <!-- Image -->
+            <div class="relative">
+
+                <img src="{% static 'assets/images/about.jpg' %}"
+                    alt="About Cloud Eyes"
+                    class="rounded-2xl w-full h-[380px] lg:h-[450px] object-cover shadow-lg">
+
+                <!-- Floating Card -->
+                <div
+                    class="absolute -bottom-5 left-6 bg-white rounded-xl shadow-xl px-6 py-4 border">
+
+                    <h3 class="text-3xl font-bold text-sky-600">
+                        15+
+                    </h3>
+
+                    <p class="text-gray-600 text-sm">
+                        Years of Trusted Eye Care
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div>
+
+                <span class="text-sky-600 font-semibold uppercase tracking-widest text-sm">
+
+                    ABOUT CLOUD EYES
+
+                </span>
+
+                <h2 class="mt-3 text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+
+                    Better Vision Begins
+                    With Better Care.
+
+                </h2>
+
+                <div class="w-20 h-1 bg-sky-600 rounded-full mt-4"></div>
+
+                <p class="mt-5 text-gray-600 leading-8">
+
+                    At Cloud Eyes, we provide comprehensive eye care with
+                    advanced diagnostic technology and experienced specialists.
+                    From routine eye checkups to cataract, LASIK, retina and
+                    glaucoma treatment, we are committed to protecting your
+                    vision with compassionate care.
+
+                </p>
+
+                <!-- Features -->
+                <div class="grid grid-cols-2 gap-5 mt-8">
+
+                    <div class="flex items-start gap-3">
+
+                        <div
+                            class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+
+                            👁️
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold">
+                                Eye Examination
+                            </h4>
+
+                            <p class="text-sm text-gray-500">
+                                Accurate Diagnosis
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-start gap-3">
+
+                        <div
+                            class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+
+                            🩺
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold">
+                                Expert Doctors
+                            </h4>
+
+                            <p class="text-sm text-gray-500">
+                                Experienced Specialists
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-start gap-3">
+
+                        <div
+                            class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+
+                            ⚡
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold">
+                                Modern Equipment
+                            </h4>
+
+                            <p class="text-sm text-gray-500">
+                                Latest Technology
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-start gap-3">
+
+                        <div
+                            class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+
+                            ❤️
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold">
+                                Patient Care
+                            </h4>
+
+                            <p class="text-sm text-gray-500">
+                                Friendly Environment
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-8 flex flex-wrap gap-4">
+
+                    <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white px-7 py-3 rounded-lg transition">
+
+                        Read More
+
+                    </a>
+
+                    <a href="tel:+919999999999"  class="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-7 py-3 rounded-lg transition">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- USP SECTION START HERE -->
+<section class="py-14 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+
+            <span class="text-sky-600 font-semibold uppercase tracking-[3px]">
+                Our USP
+            </span>
+
+            <h2 class="mt-2 text-3xl lg:text-4xl font-bold text-gray-900">
+                What Makes Us Different
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                We provide advanced eye care with experienced specialists,
+                modern technology, and personalized treatment for every patient.
+            </p>
+
+        </div>
+
+        <!-- USP Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Experienced Eye Specialists</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Highly qualified ophthalmologists with years of expertise.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Advanced Technology</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Latest diagnostic and surgical equipment for precise treatment.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Comprehensive Eye Care</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Complete eye care services under one roof.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Personalized Treatment</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Customized care plans designed for every patient.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Safe & Hygienic Environment</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Clean, safe, and comfortable clinical facilities.
+                </p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-semibold text-gray-900">Easy Appointment Booking</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Quick scheduling with minimal waiting time.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    new Swiper(".heroSwiper", {
+        loop: true,
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+});
+</script>
+
+{% endblock %}
