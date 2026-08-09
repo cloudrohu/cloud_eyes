@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+
+
+<section class="relative overflow-hidden bg-gradient-to-r from-teal-800 via-cyan-700 to-sky-700 pt-20    pb-20">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 overflow-hidden">
+
+        <!-- Top Left -->
+        <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+            <!-- Bottom Right -->
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+            <!-- Center Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px]"></div>
+
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-20">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <!-- Breadcrumb -->
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full text-white text-sm">
+
+                <a href="/" class="hover:text-sky-200 transition">
+                    Home
+                </a>
+
+                <span>/</span>
+
+                <span class="font-medium">
+                    Gallery
+                </span>
+
+            </div>
+
+            <!-- Title -->
+            <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+
+                Our Gallery
+
+            </h1>
+
+            <!-- Description -->
+            <p class="mt-6 text-lg text-sky-100 leading-8">
+
+                Explore our clinic, advanced eye care technology,
+                expert doctors, and moments that reflect our commitment
+                to exceptional patient care.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Curve -->
+    <svg class="block w-full text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" fill="currentColor">
+
+        <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+
+    </svg>
+
+</section>
+
+<section class="py-14 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px] font-semibold text-sm">
+                Our Gallery
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl font-bold text-gray-900">
+                A Glimpse of Our Clinic
+            </h2>
+
+            <p class="mt-3 text-gray-600">
+
+                Explore our clinic, facilities, technology
+                and patient-friendly environment.
+
+            </p>
+
+        </div>
+
+
+        <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl cursor-pointer h-64" onclick="openGallery(0)">
+
+                <img src="{% static 'assets/images/gallery/gallery1.jpg' %}" alt="Cloud Eyes Clinic" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300">
+                </div>
+
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+
+                    <span class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-sky-600 text-xl">
+
+                        <i class="fas fa-search-plus"></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================= EXTRA IMAGES Initially Hidden ================================================== -->
+
+            <div class="extra-gallery hidden gallery-item group
+                        relative overflow-hidden rounded-xl
+                        cursor-pointer h-64"
+                 onclick="openGallery(8)">
+
+                <img
+                    src="{% static 'assets/images/gallery/gallery9.jpg' %}"
+                    alt="Eye Clinic"
+                    class="w-full h-full object-cover
+                           transition duration-500
+                           group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-black/0
+                            group-hover:bg-black/30 transition">
+                </div>
+
+                <div class="absolute inset-0 flex items-center
+                            justify-center opacity-0
+                            group-hover:opacity-100 transition">
+
+                    <span class="w-12 h-12 rounded-full bg-white/90
+                                 flex items-center justify-center
+                                 text-sky-600 text-xl">
+
+                        <i class="fas fa-search-plus"></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="text-center mt-10">
+
+            <button id="viewMoreGallery" type="button" onclick="loadMoreGallery()" class="px-7 py-3 border border-sky-600 text-sky-600 rounded-lg font-medium hover:bg-sky-600 hover:text-white transition duration-300">
+
+                View More Photos
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="galleryLightbox" class="fixed inset-0 z-[9999] hidden bg-black/90 items-center justify-center p-4">
+
+
+    <button type="button" onclick="closeGallery()" class="absolute top-5 right-6 text-white text-4xl hover:text-sky-400 transition z-10">
+
+        &times;
+
+    </button>
+
+
+    <button type="button" onclick="previousGallery()" class="absolute left-4 md:left-8 text-white text-3xl hover:text-sky-400 transition z-10">
+
+        <i class="fas fa-chevron-left"></i>
+
+    </button>
+
+
+    <img id="galleryLightboxImage" src="" alt="Gallery Image" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl">
+
+
+    <button type="button" onclick="nextGallery()" class="absolute right-4 md:right-8 text-white text-3xl hover:text-sky-400 transition z-10">
+
+        <i class="fas fa-chevron-right"></i>
+
+    </button>
+
+
+</div>
+
+<script>
+
+
+    const galleryImages = [
+
+        "{% static 'assets/images/gallery/gallery1.jpg' %}",
+        "{% static 'assets/images/gallery/gallery2.jpg' %}",
+        "{% static 'assets/images/gallery/gallery3.jpg' %}",
+        "{% static 'assets/images/gallery/gallery4.jpg' %}",
+        "{% static 'assets/images/gallery/gallery5.jpg' %}",
+        "{% static 'assets/images/gallery/gallery6.jpg' %}",
+        "{% static 'assets/images/gallery/gallery7.jpg' %}",
+        "{% static 'assets/images/gallery/gallery8.jpg' %}",
+
+        "{% static 'assets/images/gallery/gallery9.jpg' %}",
+        "{% static 'assets/images/gallery/gallery10.jpg' %}",
+        "{% static 'assets/images/gallery/gallery11.jpg' %}",
+        "{% static 'assets/images/gallery/gallery12.jpg' %}"
+
+    ];
+
+
+    let currentGalleryIndex = 0;
+
+
+    function openGallery(index) {
+
+        currentGalleryIndex = index;
+
+        const lightbox =
+            document.getElementById("galleryLightbox");
+
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+
+        updateGalleryImage();
+
+        document.body.classList.add("overflow-hidden");
+
+    }
+
+
+
+    function closeGallery() {
+
+        const lightbox =
+            document.getElementById("galleryLightbox");
+
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+
+        document.body.classList.remove("overflow-hidden");
+
+    }
+
+
+    function updateGalleryImage() {
+
+        const image =
+            document.getElementById("galleryLightboxImage");
+
+        image.src =
+            galleryImages[currentGalleryIndex];
+
+    }
+
+
+    function nextGallery() {
+
+        currentGalleryIndex++;
+
+        if (
+            currentGalleryIndex >=
+            galleryImages.length
+        ) {
+
+            currentGalleryIndex = 0;
+
+        }
+
+        updateGalleryImage();
+
+    }
+
+
+    function previousGallery() {
+
+        currentGalleryIndex--;
+
+        if (currentGalleryIndex < 0) {
+
+            currentGalleryIndex =
+                galleryImages.length - 1;
+
+        }
+
+        updateGalleryImage();
+
+    }
+
+
+    function loadMoreGallery() {
+
+        const extraImages =
+            document.querySelectorAll(".extra-gallery");
+
+        const button =
+            document.getElementById("viewMoreGallery");
+
+
+        extraImages.forEach(function (image) {
+
+            image.classList.remove("hidden");
+
+        });
+
+
+        button.innerText =
+            "All Photos Loaded";
+
+
+        button.disabled = true;
+
+
+        button.classList.remove(
+            "hover:bg-sky-600",
+            "hover:text-white"
+        );
+
+
+        button.classList.add(
+            "opacity-60",
+            "cursor-default"
+        );
+
+    }
+
+
+    document.addEventListener("keydown", function (event) {
+
+        const lightbox =
+            document.getElementById("galleryLightbox");
+
+
+        /* ESC */
+        if (event.key === "Escape") {
+
+            closeGallery();
+
+        }
+
+
+        /* Right Arrow */
+        if (
+            event.key === "ArrowRight" &&
+            !lightbox.classList.contains("hidden")
+        ) {
+
+            nextGallery();
+
+        }
+
+
+        /* Left Arrow */
+        if (
+            event.key === "ArrowLeft" &&
+            !lightbox.classList.contains("hidden")
+        ) {
+
+            previousGallery();
+
+        }
+
+    });
+
+
+    document
+        .getElementById("galleryLightbox")
+        .addEventListener("click", function (event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closeGallery();
+
+            }
+
+        });
+
+</script>
+
+
+{% endblock %}

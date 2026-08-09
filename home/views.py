@@ -5,5 +5,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, "home/index.html")
 
-def About(request):
-    return render(request, "home/about.html")    
+def about(request):
+    return render(request, "home/about.html")
+
+def gallery(request):
+    return render(request, "home/gallery.html")

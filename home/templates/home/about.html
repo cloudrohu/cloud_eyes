@@ -1,0 +1,366 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- About Hero -->
+<section class="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden pt-12">
+
+    <div class="absolute inset-0">
+        <img src="assets/images/about-hero.jpg" class="w-full h-full object-cover" alt="Cloud Eyes">
+        <div class="absolute inset-0 bg-slate-900/70"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+
+        <span class="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 px-4 py-2 rounded-full text-sm">
+            <i class="fa-solid fa-eye"></i>
+            About Cloud Eyes
+        </span>
+
+        <h1 class="mt-5 text-4xl md:text-6xl font-bold text-white leading-tight max-w-3xl">
+            Dedicated to Better
+            <span class="text-sky-400">Eye Care</span>
+        </h1>
+
+        <p class="mt-4 text-slate-300 text-lg max-w-2xl">
+            Advanced eye care with experienced specialists, modern technology,
+            and compassionate treatment for every patient.
+        </p>
+
+        <div class="mt-8 flex gap-4">
+            <a href="#appointment" class="px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white rounded-lg transition">
+                Book Appointment
+            </a>
+
+            <a href="#services" class="px-6 py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-slate-900 transition">
+                Our Services
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-20 bg-white overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Image -->
+            <div data-aos="fade-right" class="relative">
+
+                <img src="assets/images/about-clinic.jpg"
+                    alt="Cloud Eyes"
+                    class="rounded-3xl shadow-2xl w-full">
+
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -right-6 bg-sky-600 text-white rounded-2xl p-6 shadow-2xl hover:scale-105 transition duration-500">
+
+                    <h3 class="text-4xl font-bold">10+</h3>
+                    <p class="text-sky-100 mt-1">
+                        Years of Trusted Eye Care
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div data-aos="fade-left">
+
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 text-sky-700 font-medium">
+                    <i class="fa-solid fa-eye"></i>
+                    About Cloud Eyes
+                </span>
+
+                <h2 class="text-4xl font-bold text-slate-900 mt-6 leading-tight">
+                    Your Vision,
+                    <span class="text-sky-600">Our Commitment</span>
+                </h2>
+
+                <p class="text-slate-600 mt-6 leading-8">
+                    At Cloud Eyes, we combine experienced specialists, advanced
+                    technology, and compassionate care to deliver exceptional
+                    eye treatments for every patient. Our goal is to protect,
+                    restore, and enhance your vision with personalized care.
+                </p>
+
+                <!-- Features -->
+
+                <div class="grid sm:grid-cols-2 gap-5 mt-8">
+
+                    <div class="flex gap-3 group">
+
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-slate-900">
+                                Expert Doctors
+                            </h4>
+
+                            <p class="text-sm text-slate-500">
+                                Experienced eye specialists.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-3 group">
+
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-slate-900">
+                                Modern Technology
+                            </h4>
+
+                            <p class="text-sm text-slate-500">
+                                Accurate diagnosis & treatment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-3 group">
+
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-slate-900">
+                                Personalized Care
+                            </h4>
+
+                            <p class="text-sm text-slate-500">
+                                Every patient matters.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-3 group">
+
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold text-slate-900">
+                                Trusted Clinic
+                            </h4>
+
+                            <p class="text-sm text-slate-500">
+                                Safe & comfortable environment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="#appointment"
+                    class="inline-flex items-center gap-3 mt-10 px-7 py-3 rounded-xl bg-sky-600 text-white hover:bg-sky-700 transition">
+
+                    Book Appointment
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Mission & Vision -->
+<section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 rounded-full bg-sky-100 text-sky-700 font-medium">
+                Our Purpose
+            </span>
+
+            <h2 class="text-4xl font-bold text-slate-900 mt-4">
+                Mission & Vision
+            </h2>
+
+            <p class="mt-4 text-slate-600">
+                Guided by compassion, innovation, and excellence, we are committed
+                to delivering the highest standard of eye care.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Mission -->
+            <div data-aos="fade-right"
+                class="bg-white rounded-3xl p-10 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-500 border border-slate-100">
+
+                <div class="w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <h3 class="text-3xl font-bold text-slate-900 mt-6">
+                    Our Mission
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    To provide accessible, advanced, and compassionate eye care
+                    through experienced specialists, modern technology, and
+                    personalized treatment that helps every patient enjoy a
+                    lifetime of healthy vision.
+                </p>
+
+            </div>
+
+            <!-- Vision -->
+            <div data-aos="fade-left"
+                class="bg-sky-600 rounded-3xl p-10 text-white shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-500 relative overflow-hidden">
+
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-white/10 rounded-full"></div>
+
+                <div class="relative">
+
+                    <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-3xl">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <h3 class="text-3xl font-bold mt-6">
+                        Our Vision
+                    </h3>
+
+                    <p class="mt-5 text-sky-100 leading-8">
+                        To become the most trusted eye care center by combining
+                        clinical excellence, innovation, and patient-first care,
+                        ensuring brighter vision and healthier lives for every
+                        community we serve.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <!-- Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-sky-100 text-sky-700 rounded-full font-medium">
+                Why Choose Us
+            </span>
+
+            <h2 class="text-4xl font-bold text-slate-900 mt-4">
+                Why Patients Trust Cloud Eyes
+            </h2>
+
+            <p class="mt-4 text-slate-600">
+                We combine medical expertise, advanced technology, and compassionate care
+                to provide the best possible experience for every patient.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Card -->
+            <div data-aos="zoom-in" class="group bg-slate-50 rounded-2xl p-8 text-center hover:bg-sky-600 hover:text-white transition duration-500">
+
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl group-hover:bg-white group-hover:text-sky-600 transition">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6">
+                    Expert Doctors
+                </h3>
+
+                <p class="mt-3 text-slate-500 group-hover:text-sky-100">
+                    Highly experienced ophthalmologists dedicated to your vision.
+                </p>
+
+            </div>
+
+            <!-- Card -->
+            <div data-aos="zoom-in" data-aos-delay="100" class="group bg-slate-50 rounded-2xl p-8 text-center hover:bg-sky-600 hover:text-white transition duration-500">
+
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl group-hover:bg-white group-hover:text-sky-600 transition">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6">
+                    Advanced Technology
+                </h3>
+
+                <p class="mt-3 text-slate-500 group-hover:text-sky-100">
+                    Modern equipment for accurate diagnosis and treatment.
+                </p>
+
+            </div>
+
+            <!-- Card -->
+            <div data-aos="zoom-in" data-aos-delay="200" class="group bg-slate-50 rounded-2xl p-8 text-center hover:bg-sky-600 hover:text-white transition duration-500">
+
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl group-hover:bg-white group-hover:text-sky-600 transition">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6">
+                    Personalized Care
+                </h3>
+
+                <p class="mt-3 text-slate-500 group-hover:text-sky-100">
+                    Every treatment plan is tailored to your individual needs.
+                </p>
+
+            </div>
+
+            <!-- Card -->
+            <div data-aos="zoom-in" data-aos-delay="300" class="group bg-slate-50 rounded-2xl p-8 text-center hover:bg-sky-600 hover:text-white transition duration-500">
+
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl group-hover:bg-white group-hover:text-sky-600 transition">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6">
+                    Trusted Excellence
+                </h3>
+
+                <p class="mt-3 text-slate-500 group-hover:text-sky-100">
+                    Delivering quality eye care with trust, safety, and compassion.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock content %}
