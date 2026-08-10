@@ -1,0 +1,3556 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Doctor Profile | Cloud Eyes{% endblock %}
+
+{% block content %}
+
+<section class="relative overflow-hidden bg-slate-900 pt-28 pb-16">
+
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-sky-500/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-8 flex items-center gap-2 text-sm text-slate-400">
+            <a href="{% url 'home' %}" class="hover:text-sky-400 transition">
+                Home
+
+            </a>
+
+            <span>/</span>
+
+            <a href="{% url 'doctor_profile' %}" class="hover:text-sky-400 transition">
+
+                Doctor
+
+            </a>
+
+            <span>/</span>
+
+            <span class="text-white">
+                Profile
+            </span>
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <div class="text-white">
+
+                <!-- Small Label -->
+                <span class="inline-block text-sky-400 uppercase tracking-[3px] text-sm font-semibold">
+
+                    Consultant Ophthalmologist
+
+                </span>
+
+
+                <!-- Doctor Name -->
+                <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+
+                    Dr. Your
+                    <span class="text-sky-400">
+                        Doctor Name
+                    </span>
+
+                </h1>
+
+
+                <!-- Qualification -->
+                <p class="mt-4 text-lg text-slate-300 font-medium">
+
+                    MBBS, MS – Ophthalmology
+
+                </p>
+
+
+                <!-- Description -->
+                <p class="mt-6 max-w-xl text-slate-300 leading-8">
+
+                    Dedicated to providing advanced and
+                    compassionate eye care with a focus on
+                    cataract surgery, refractive procedures
+                    and comprehensive ophthalmology.
+
+                </p>
+
+
+                <!-- Experience -->
+                <div class="mt-7 flex flex-wrap gap-6">
+
+                    <div>
+
+                        <p class="text-3xl font-bold text-white">
+                            15+
+                        </p>
+
+                        <p class="text-sm text-slate-400">
+                            Years Experience
+                        </p>
+
+                    </div>
+
+
+                    <div class="w-px bg-slate-700"></div>
+
+
+                    <div>
+
+                        <p class="text-3xl font-bold text-white">
+                            10K+
+                        </p>
+
+                        <p class="text-sm text-slate-400">
+                            Surgeries
+                        </p>
+
+                    </div>
+
+
+                    <div class="w-px bg-slate-700"></div>
+
+
+                    <div>
+
+                        <p class="text-3xl font-bold text-white">
+                            50K+
+                        </p>
+
+                        <p class="text-sm text-slate-400">
+                            Patients
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="mt-8 flex flex-wrap gap-4">
+
+                    <a href="/#appointment" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-700 text-white px-7 py-3 rounded-lg font-semibold transition">
+
+                        Book Appointment
+
+                    </a>
+
+
+                    <a href="tel:+919999999999" class="inline-flex items-center justify-center border border-slate-600 hover:border-sky-400 hover:text-sky-400 text-white px-7 py-3 rounded-lg font-semibold transition">
+
+                        Call Clinic
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="relative">
+
+                <!-- Image -->
+                <div class="relative max-w-md mx-auto lg:ml-auto">
+
+                    <div class="absolute inset-0 rounded-2xl bg-sky-500/20 blur-2xl scale-90">
+                    </div>
+
+
+                    <img src="{% static 'assets/images/doctor.jpg' %}" alt="Dr. Your Doctor Name" class="relative w-full h-[420px] sm:h-[480px] object-cover rounded-2xl shadow-2xl">
+
+
+                    <!-- Experience Badge -->
+                    <div class="absolute bottom-5 left-5 bg-white rounded-xl px-5 py-4 shadow-xl">
+
+                        <p class="text-2xl font-bold text-sky-600">
+
+                            15+
+
+                        </p>
+
+                        <p class="text-xs text-gray-500">
+
+                            Years of Excellence
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <!-- Left Content -->
+            <div>
+
+                <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+                    About The Doctor
+                </span>
+
+                <h2 class="mt-3 text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                    Dedicated to Better
+                    <span class="text-sky-600">
+                        Vision & Care
+                    </span>
+                </h2>
+
+                <p class="mt-5 text-gray-600 leading-8">
+                    Dr. Your Doctor Name is a dedicated
+                    ophthalmologist committed to providing
+                    personalized and comprehensive eye care.
+                    With years of clinical experience, the focus
+                    remains on accurate diagnosis, advanced
+                    treatment and compassionate patient care.
+                </p>
+
+                <p class="mt-4 text-gray-600 leading-8">
+                    From routine eye examinations to advanced
+                    surgical procedures, every patient receives
+                    individualized attention and treatment based
+                    on their specific eye health needs.
+                </p>
+
+                <!-- Highlights -->
+                <div class="mt-7 grid sm:grid-cols-2 gap-4">
+
+                    <div class="flex items-start gap-3">
+
+                        <span class="text-sky-600 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+
+                        <div>
+                            <h3 class="font-semibold text-gray-900">
+                                Patient-Centred Care
+                            </h3>
+
+                            <p class="text-sm text-gray-500 mt-1">
+                                Personalized treatment for every patient.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex items-start gap-3">
+
+                        <span class="text-sky-600 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+
+                        <div>
+                            <h3 class="font-semibold text-gray-900">
+                                Advanced Treatment
+                            </h3>
+
+                            <p class="text-sm text-gray-500 mt-1">
+                                Modern techniques for better outcomes.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="#expertise" class="inline-flex items-center gap-2 mt-7 text-sky-600 font-semibold hover:text-sky-800 transition">
+
+                    Explore Expertise
+
+                    <i class="fas fa-arrow-right text-sm"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="relative">
+
+                <div class="bg-slate-50 rounded-2xl p-7 lg:p-9">
+
+                    <p class="text-sky-600 text-sm font-semibold uppercase tracking-wider">
+                        Professional Overview
+                    </p>
+
+                    <div class="mt-7 space-y-6">
+
+                        <!-- Qualification -->
+                        <div class="flex justify-between gap-5 border-b border-gray-200 pb-5">
+
+                            <span class="text-gray-500">
+                                Qualification
+                            </span>
+
+                            <span class="font-semibold text-gray-900 text-right">
+                                MBBS, MS Ophthalmology
+                            </span>
+
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="flex justify-between gap-5 border-b border-gray-200 pb-5">
+
+                            <span class="text-gray-500">
+                                Experience
+                            </span>
+
+                            <span class="font-semibold text-gray-900">
+                                15+ Years
+                            </span>
+
+                        </div>
+
+                        <!-- Specialization -->
+                        <div class="flex justify-between gap-5
+                                    border-b border-gray-200 pb-5">
+
+                            <span class="text-gray-500">
+                                Specialization
+                            </span>
+
+                            <span class="font-semibold text-gray-900 text-right">
+                                Ophthalmology
+                            </span>
+
+                        </div>
+
+                        <!-- Consultation -->
+                        <div class="flex justify-between gap-5">
+
+                            <span class="text-gray-500">
+                                Consultation
+                            </span>
+
+                            <span class="font-semibold text-gray-900">
+                                By Appointment
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Small Quote -->
+                <div class="mt-5 bg-sky-50  border-l-4 border-sky-600  px-6 py-5 rounded-r-xl">
+
+                    <p class="text-gray-700 italic leading-7">
+                        "Clear vision is not just about seeing better,
+                        it's about living better."
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-12 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-9">
+
+            <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+                Career Highlights
+            </span>
+
+            <h2 class="mt-2 text-3xl lg:text-4xl  font-bold text-gray-900">
+                Experience You Can Trust
+            </h2>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 border border-gray-200 rounded-2xl overflow-hidden bg-white">
+
+            <!-- Experience -->
+            <div class="text-center py-7 px-4 border-b lg:border-b-0 border-r border-gray-200">
+
+                <div class="text-sky-600 text-2xl mb-2">
+                    <i class="fas fa-user-md"></i>
+                </div>
+
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    15+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+                    Years of Experience
+                </p>
+
+            </div>
+
+
+            <!-- Surgeries -->
+            <div class="text-center py-7 px-4 border-b lg:border-b-0 lg:border-r border-gray-200">
+
+                <div class="text-sky-600 text-2xl mb-2">
+                    <i class="fas fa-eye"></i>
+                </div>
+
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    10K+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+                    Successful Surgeries
+                </p>
+
+            </div>
+
+
+            <!-- Patients -->
+            <div class="text-center py-7 px-4 border-r border-gray-200">
+
+                <div class="text-sky-600 text-2xl mb-2">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    50K+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+                    Patients Treated
+                </p>
+
+            </div>
+
+
+            <!-- Awards -->
+            <div class="text-center py-7 px-4">
+
+                <div class="text-sky-600 text-2xl mb-2">
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    20+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+                    Awards & Recognitions
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="expertise" class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="max-w-2xl mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+                Areas of Expertise
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl font-bold text-gray-900">
+                Specialized Eye Care
+                <span class="text-sky-600">
+                    With Experience
+                </span>
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+                Providing specialized diagnosis and treatment
+                across a wide range of ophthalmic conditions
+                with a patient-focused approach.
+            </p>
+
+        </div>
+
+
+        <!-- Expertise Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+            <!-- Cataract -->
+            <div class="group border-t-2 border-sky-600  pt-6">
+
+                <div class="w-12 h-12 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 text-xl group-hover:bg-sky-600 group-hover:text-white transition">
+
+                    <i class="fas fa-eye"></i>
+
+                </div>
+
+                <h3 class="mt-5 text-xl font-bold text-gray-900">
+
+                    Cataract Surgery
+
+                </h3>
+
+                <p class="mt-3 text-gray-600 text-sm leading-6">
+
+                    Comprehensive cataract evaluation,
+                    advanced surgical procedures and
+                    personalized lens selection.
+
+                </p>
+
+            </div>
+
+
+            <!-- LASIK -->
+            <div class="group border-t-2 border-sky-600 pt-6">
+
+                <div class="w-12 h-12 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 text-xl group-hover:bg-sky-600 group-hover:text-white transition">
+
+                    <i class="fas fa-glasses"></i>
+
+                </div>
+
+                <h3 class="mt-5 text-xl font-bold text-gray-900">
+
+                    LASIK & Refractive Surgery
+
+                </h3>
+
+                <p class="mt-3 text-gray-600 text-sm leading-6">
+
+                    Vision correction solutions designed
+                    around individual eye health and
+                    visual requirements.
+
+                </p>
+
+            </div>
+
+
+            <!-- Retina -->
+            <div class="group border-t-2 border-sky-600 pt-6">
+
+                <div class="w-12 h-12 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 text-xl group-hover:bg-sky-600 group-hover:text-white transition">
+
+                    <i class="fas fa-microscope"></i>
+
+                </div>
+
+                <h3 class="mt-5 text-xl font-bold text-gray-900">
+
+                    Retina Care
+
+                </h3>
+
+                <p class="mt-3 text-gray-600 text-sm leading-6">
+
+                    Diagnosis and management of retinal
+                    conditions using advanced diagnostic
+                    technology.
+
+                </p>
+
+            </div>
+
+
+            <!-- Glaucoma -->
+            <div class="group border-t-2 border-sky-600 pt-6">
+
+                <div class="w-12 h-12 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 text-xl group-hover:bg-sky-600 group-hover:text-white transition">
+
+                    <i class="fas fa-heartbeat"></i>
+
+                </div>
+
+                <h3 class="mt-5 text-xl font-bold text-gray-900">
+
+                    Glaucoma Care
+
+                </h3>
+
+                <p class="mt-3 text-gray-600 text-sm leading-6">
+
+                    Early detection, monitoring and
+                    comprehensive management of
+                    glaucoma and eye pressure.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+
+            <div class="relative">
+
+                <div class="overflow-hidden rounded-2xl">
+
+                    <img src="{% static 'assets/images/doctor-surgery.jpg' %}" alt="Advanced Eye Surgery" class="w-full h-[420px] object-cover">
+
+                </div>
+
+
+                <!-- Small Overlay -->
+                <div class="absolute bottom-5 left-5 bg-white rounded-xl shadow-lg px-5 py-4">
+
+                    <p class="text-2xl font-bold text-sky-600">
+                        10K+
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                        Successful Procedures
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+
+                    Surgical Expertise
+
+                </span>
+
+
+                <h2 class="mt-3 text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+
+                    Advanced Procedures
+                    With a
+
+                    <span class="text-sky-600">
+                        Patient-First Approach
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-5 text-gray-600 leading-7">
+
+                    Combining clinical experience, modern
+                    surgical techniques and careful patient
+                    evaluation to provide safe and personalized
+                    eye care.
+
+                </p>
+
+
+                <!-- Procedures -->
+
+                <div class="mt-8 space-y-6">
+
+
+                    <!-- Procedure 1 -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-eye"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-lg font-bold text-gray-900">
+
+                                Advanced Cataract Surgery
+
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-600 leading-6">
+
+                                Comprehensive cataract treatment
+                                with personalized intraocular lens
+                                selection and modern surgical
+                                techniques.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-glasses"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-lg font-bold
+                                       text-gray-900">
+
+                                LASIK & Refractive Procedures
+
+                            </h3>
+
+                            <p class="mt-1 text-sm
+                                      text-gray-600 leading-6">
+
+                                Personalized vision correction
+                                evaluation and advanced refractive
+                                treatment options.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Procedure 3 -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-microscope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-lg font-bold text-gray-900">
+
+                                Retina Procedures
+
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-600 leading-6">
+
+                                Detailed diagnosis and treatment
+                                planning for a range of retinal
+                                conditions.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Procedure 4 -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-heartbeat"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-lg font-bold text-gray-900">
+
+                                Glaucoma Management
+
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-600 leading-6">
+
+                                Comprehensive assessment,
+                                monitoring and treatment planning
+                                for glaucoma patients.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+
+            <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+
+                Education & Qualifications
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl  font-bold text-gray-900">
+
+                Academic & Professional
+                <span class="text-sky-600">
+                    Journey
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                A strong academic foundation combined with
+                specialized training in ophthalmology and
+                advanced eye care.
+
+            </p>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="relative">
+
+
+            <!-- Vertical Line -->
+            <div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 md:-translate-x-1/2"></div>
+
+
+            <div class="relative grid md:grid-cols-2  gap-8 mb-10">
+
+
+                <!-- Left -->
+                <div class="md:text-right md:pr-12">
+
+                    <span class="text-sky-600 font-bold text-lg">
+
+                        2012
+
+                    </span>
+
+                    <h3 class="mt-1 text-xl font-bold text-gray-900">
+
+                        Bachelor of Medicine
+                        & Surgery
+
+                    </h3>
+
+                    <p class="mt-2 text-gray-500 text-sm leading-6">
+
+                        MBBS
+
+                    </p>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="md:pl-12">
+
+                    <div class="bg-slate-50 rounded-xl p-5">
+
+                        <h4 class="font-semibold text-gray-900">
+
+                            Medical Graduation
+
+                        </h4>
+
+                        <p class="mt-2 text-sm text-gray-600 leading-6">
+
+                            Completed foundational medical
+                            education with comprehensive
+                            clinical training.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline Dot -->
+
+                <div class="absolute left-5 md:left-1/2 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-sky-600 ring-4 ring-sky-100">
+                </div>
+
+            </div>
+
+
+            <div class="relative grid md:grid-cols-2 gap-8 mb-10">
+
+
+                <!-- Left -->
+                <div class="md:pr-12 md:order-1">
+
+                    <div class="bg-slate-50 rounded-xl p-5">
+
+                        <h4 class="font-semibold text-gray-900">
+
+                            Ophthalmology Specialization
+
+                        </h4>
+
+                        <p class="mt-2 text-sm  text-gray-600 leading-6">
+
+                            Advanced clinical training in
+                            diagnosis and management of
+                            various eye conditions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="md:text-left md:pl-12 md:order-2">
+
+                    <span class="text-sky-600 font-bold text-lg">
+
+                        2015
+
+                    </span>
+
+                    <h3 class="mt-1 text-xl font-bold text-gray-900">
+
+                        MS – Ophthalmology
+
+                    </h3>
+
+                    <p class="mt-2 text-gray-500 text-sm leading-6">
+
+                        Postgraduate Specialization
+
+                    </p>
+
+                </div>
+
+
+                <!-- Timeline Dot -->
+
+                <div class="absolute left-5
+                            md:left-1/2
+                            top-1
+                            -translate-x-1/2
+                            w-3 h-3
+                            rounded-full
+                            bg-sky-600
+                            ring-4 ring-sky-100">
+                </div>
+
+            </div>
+
+
+
+            <div class="relative grid md:grid-cols-2
+                        gap-8 mb-10">
+
+
+                <!-- Left -->
+                <div class="md:text-right md:pr-12">
+
+                    <span class="text-sky-600
+                                 font-bold text-lg">
+
+                        2017
+
+                    </span>
+
+                    <h3 class="mt-1 text-xl
+                               font-bold text-gray-900">
+
+                        Advanced Surgical Training
+
+                    </h3>
+
+                    <p class="mt-2 text-gray-500
+                              text-sm leading-6">
+
+                        Specialized Eye Surgery
+
+                    </p>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="md:pl-12">
+
+                    <div class="bg-slate-50
+                                rounded-xl
+                                p-5">
+
+                        <h4 class="font-semibold
+                                   text-gray-900">
+
+                            Advanced Ophthalmic Training
+
+                        </h4>
+
+                        <p class="mt-2 text-sm
+                                  text-gray-600 leading-6">
+
+                            Further training in advanced
+                            ophthalmic procedures and
+                            surgical techniques.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline Dot -->
+
+                <div class="absolute left-5
+                            md:left-1/2
+                            top-1
+                            -translate-x-1/2
+                            w-3 h-3
+                            rounded-full
+                            bg-sky-600
+                            ring-4 ring-sky-100">
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                    ITEM 4
+            ================================== -->
+
+            <div class="relative grid md:grid-cols-2
+                        gap-8">
+
+
+                <!-- Left -->
+                <div class="md:pr-12">
+
+                    <div class="bg-sky-50
+                                rounded-xl
+                                p-5
+                                border border-sky-100">
+
+                        <h4 class="font-semibold
+                                   text-gray-900">
+
+                            Continued Professional Development
+
+                        </h4>
+
+                        <p class="mt-2 text-sm
+                                  text-gray-600 leading-6">
+
+                            Continuing education and
+                            professional development to stay
+                            updated with advancements in
+                            ophthalmic care.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="md:pl-12">
+
+                    <span class="text-sky-600
+                                 font-bold text-lg">
+
+                        Present
+
+                    </span>
+
+                    <h3 class="mt-1 text-xl
+                               font-bold text-gray-900">
+
+                        Continuing Education
+
+                    </h3>
+
+                    <p class="mt-2 text-gray-500
+                              text-sm leading-6">
+
+                        Ongoing Professional Development
+
+                    </p>
+
+                </div>
+
+
+                <!-- Timeline Dot -->
+
+                <div class="absolute left-5
+                            md:left-1/2
+                            top-1
+                            -translate-x-1/2
+                            w-3 h-3
+                            rounded-full
+                            bg-sky-600
+                            ring-4 ring-sky-100">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                Awards & Achievements
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Recognized for
+                <span class="text-sky-600">
+                    Excellence
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                A commitment to clinical excellence, continuous
+                learning and quality patient care.
+
+            </p>
+
+        </div>
+
+
+        <!-- Achievements -->
+
+        <div class="max-w-5xl mx-auto
+                    divide-y divide-gray-200
+                    border-y border-gray-200">
+
+
+            <!-- Achievement 1 -->
+
+            <div class="py-6
+                        flex flex-col sm:flex-row
+                        sm:items-center
+                        justify-between gap-5">
+
+                <div class="flex items-start gap-5">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-full
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg">
+
+                        <i class="fas fa-award"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold
+                                   text-gray-900">
+
+                            Excellence in Ophthalmic Care
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-500">
+
+                            Recognized for commitment to
+                            quality eye care and patient service.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-sm font-semibold
+                             text-sky-600 sm:pr-2">
+
+                    2025
+
+                </span>
+
+            </div>
+
+
+
+            <!-- Achievement 2 -->
+
+            <div class="py-6
+                        flex flex-col sm:flex-row
+                        sm:items-center
+                        justify-between gap-5">
+
+                <div class="flex items-start gap-5">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-full
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg">
+
+                        <i class="fas fa-medal"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold
+                                   text-gray-900">
+
+                            Advanced Cataract Surgery Recognition
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-500">
+
+                            Recognition for experience in
+                            advanced cataract procedures.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-sm font-semibold
+                             text-sky-600 sm:pr-2">
+
+                    2023
+
+                </span>
+
+            </div>
+
+
+
+            <!-- Achievement 3 -->
+
+            <div class="py-6
+                        flex flex-col sm:flex-row
+                        sm:items-center
+                        justify-between gap-5">
+
+                <div class="flex items-start gap-5">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-full
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg">
+
+                        <i class="fas fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold
+                                   text-gray-900">
+
+                            Outstanding Clinical Contribution
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-500">
+
+                            Recognition for contribution to
+                            clinical ophthalmology.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-sm font-semibold
+                             text-sky-600 sm:pr-2">
+
+                    2021
+
+                </span>
+
+            </div>
+
+
+
+            <!-- Achievement 4 -->
+
+            <div class="py-6
+                        flex flex-col sm:flex-row
+                        sm:items-center
+                        justify-between gap-5">
+
+                <div class="flex items-start gap-5">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-full
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg">
+
+                        <i class="fas fa-certificate"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold
+                                   text-gray-900">
+
+                            Advanced Ophthalmology Certification
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-500">
+
+                            Completed specialized professional
+                            training in advanced eye care.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="text-sm font-semibold
+                             text-sky-600 sm:pr-2">
+
+                    2019
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px]
+                         text-sm font-semibold">
+
+                Professional Memberships
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Associations & Professional
+                <span class="text-sky-600">
+                    Affiliations
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                Active involvement with professional medical
+                communities and organizations dedicated to
+                advancing ophthalmic care.
+
+            </p>
+
+        </div>
+
+
+        <!-- Membership List -->
+        <div class="max-w-5xl mx-auto">
+
+            <div class="grid md:grid-cols-2 gap-x-10">
+
+
+                <!-- Membership 1 -->
+                <div class="flex items-center gap-5
+                            py-6 border-b border-gray-200">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12 rounded-full
+                                bg-white
+                                border border-gray-200
+                                flex items-center justify-center
+                                text-sky-600">
+
+                        <i class="fas fa-user-md"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-gray-900">
+
+                            Indian Ophthalmological Society
+
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+
+                            Professional Member
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Membership 2 -->
+                <div class="flex items-center gap-5
+                            py-6 border-b border-gray-200">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12 rounded-full
+                                bg-white
+                                border border-gray-200
+                                flex items-center justify-center
+                                text-sky-600">
+
+                        <i class="fas fa-stethoscope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-gray-900">
+
+                            State Ophthalmological Association
+
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+
+                            Professional Member
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Membership 3 -->
+                <div class="flex items-center gap-5
+                            py-6 border-b border-gray-200">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12 rounded-full
+                                bg-white
+                                border border-gray-200
+                                flex items-center justify-center
+                                text-sky-600">
+
+                        <i class="fas fa-hospital"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-gray-900">
+
+                            National Medical Association
+
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+
+                            Registered Member
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Membership 4 -->
+                <div class="flex items-center gap-5
+                            py-6 border-b border-gray-200">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12 rounded-full
+                                bg-white
+                                border border-gray-200
+                                flex items-center justify-center
+                                text-sky-600">
+
+                        <i class="fas fa-globe"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-gray-900">
+
+                            International Ophthalmic Association
+
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+
+                            Professional Affiliate
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px]
+                         text-sm font-semibold">
+
+                Technology & Approach
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Modern Care With a
+                <span class="text-sky-600">
+                    Personal Touch
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                Combining advanced technology with clinical
+                experience to provide accurate diagnosis,
+                precise treatment and compassionate care.
+
+            </p>
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+
+            <!-- =================================
+                    IMAGE
+            ================================== -->
+
+            <div class="relative group overflow-hidden rounded-2xl">
+
+                <img
+                    src="{% static 'assets/images/technology/technology.jpg' %}"
+                    alt="Advanced Eye Care Technology"
+                    class="w-full h-[420px] object-cover
+                           transition duration-700
+                           group-hover:scale-105">
+
+                <!-- Overlay -->
+                <div class="absolute inset-0
+                            bg-gradient-to-t
+                            from-slate-900/70
+                            via-transparent
+                            to-transparent
+                            opacity-80">
+                </div>
+
+
+                <!-- Image Text -->
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+
+                    <p class="text-sm uppercase
+                              tracking-wider
+                              text-sky-300
+                              font-semibold">
+
+                        Advanced Eye Care
+
+                    </p>
+
+                    <h3 class="mt-1 text-2xl font-bold">
+
+                        Precision Through Technology
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                    APPROACH LIST
+            ================================== -->
+
+            <div class="space-y-4">
+
+
+                <!-- Item 1 -->
+                <div class="group flex gap-5 p-5
+                            rounded-xl
+                            border border-gray-200
+                            hover:border-sky-300
+                            hover:bg-sky-50
+                            hover:shadow-md
+                            transition duration-300">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg
+                                group-hover:bg-sky-600
+                                group-hover:text-white
+                                transition duration-300">
+
+                        <i class="fas fa-microscope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-gray-900
+                                   group-hover:text-sky-600
+                                   transition">
+
+                            Advanced Diagnostics
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-600 leading-6">
+
+                            Modern diagnostic technology helps
+                            evaluate eye health accurately and
+                            support informed treatment decisions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Item 2 -->
+                <div class="group flex gap-5 p-5
+                            rounded-xl
+                            border border-gray-200
+                            hover:border-sky-300
+                            hover:bg-sky-50
+                            hover:shadow-md
+                            transition duration-300">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg
+                                group-hover:bg-sky-600
+                                group-hover:text-white
+                                transition duration-300">
+
+                        <i class="fas fa-crosshairs"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-gray-900
+                                   group-hover:text-sky-600
+                                   transition">
+
+                            Precise Treatment
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-600 leading-6">
+
+                            Treatment plans are carefully tailored
+                            according to each patient's individual
+                            condition and visual requirements.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Item 3 -->
+                <div class="group flex gap-5 p-5
+                            rounded-xl
+                            border border-gray-200
+                            hover:border-sky-300
+                            hover:bg-sky-50
+                            hover:shadow-md
+                            transition duration-300">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg
+                                group-hover:bg-sky-600
+                                group-hover:text-white
+                                transition duration-300">
+
+                        <i class="fas fa-user-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-gray-900
+                                   group-hover:text-sky-600
+                                   transition">
+
+                            Patient-First Approach
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-600 leading-6">
+
+                            Every consultation focuses on listening
+                            to patients, explaining treatment options
+                            and making them comfortable.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Item 4 -->
+                <div class="group flex gap-5 p-5
+                            rounded-xl
+                            border border-gray-200
+                            hover:border-sky-300
+                            hover:bg-sky-50
+                            hover:shadow-md
+                            transition duration-300">
+
+                    <div class="flex-shrink-0
+                                w-12 h-12
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center
+                                text-lg
+                                group-hover:bg-sky-600
+                                group-hover:text-white
+                                transition duration-300">
+
+                        <i class="fas fa-heart"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-gray-900
+                                   group-hover:text-sky-600
+                                   transition">
+
+                            Complete Follow-Up Care
+
+                        </h3>
+
+                        <p class="mt-1 text-sm
+                                  text-gray-600 leading-6">
+
+                            Continued guidance and follow-up support
+                            throughout the treatment and recovery
+                            journey.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="relative overflow-hidden bg-slate-900 py-16 lg:py-20">
+
+    <!-- Background Glow -->
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -left-32
+                    w-96 h-96 rounded-full
+                    bg-sky-500/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -right-32
+                    w-96 h-96 rounded-full
+                    bg-cyan-500/10 blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-5xl mx-auto px-4
+                sm:px-6 lg:px-8 text-center">
+
+        <!-- Small Label -->
+
+        <span class="text-sky-400 uppercase
+                     tracking-[3px]
+                     text-sm font-semibold">
+
+            Doctor's Philosophy
+
+        </span>
+
+
+        <!-- Quote -->
+
+        <div class="mt-6">
+
+            <span class="text-sky-500/30
+                         text-7xl md:text-8xl
+                         leading-none font-serif">
+
+                “
+
+            </span>
+
+            <blockquote class="max-w-4xl mx-auto
+                               -mt-5
+                               text-2xl md:text-3xl
+                               lg:text-4xl
+                               font-semibold
+                               text-white
+                               leading-relaxed">
+
+                Every patient deserves
+                <span class="text-sky-400">
+                    clear vision,
+                </span>
+                compassionate care and
+                the confidence to see
+                life at its best.
+
+            </blockquote>
+
+            <span class="block text-sky-500/30
+                         text-7xl md:text-8xl
+                         leading-none font-serif
+                         text-right">
+
+                ”
+
+            </span>
+
+        </div>
+
+
+        <!-- Doctor -->
+
+        <div class="mt-5">
+
+            <div class="w-14 h-14 mx-auto
+                        rounded-full overflow-hidden
+                        ring-2 ring-sky-400/40">
+
+                <img
+                    src="{% static 'assets/images/doctor.jpg' %}"
+                    alt="Doctor"
+                    class="w-full h-full object-cover">
+
+            </div>
+
+            <h3 class="mt-3 text-white
+                       font-semibold">
+
+                Dr. Your Doctor Name
+
+            </h3>
+
+            <p class="mt-1 text-sm text-slate-400">
+
+                Consultant Ophthalmologist
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                Patient Stories
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                What Our Patients
+                <span class="text-sky-600">
+                    Say
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                Hear from patients who trusted our doctor
+                and experienced personalized eye care.
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+                TESTIMONIAL SWIPER
+        ====================================== -->
+
+        <div class="swiper doctorTestimonialSwiper">
+
+            <div class="swiper-wrapper">
+
+
+                <!-- =================================
+                        TESTIMONIAL 1
+                ================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="group bg-white
+                                border border-gray-200
+                                rounded-2xl p-7
+                                h-full
+                                hover:-translate-y-1
+                                hover:shadow-xl
+                                hover:border-sky-200
+                                transition duration-300">
+
+                        <!-- Rating -->
+
+                        <div class="flex gap-1
+                                    text-yellow-400 text-sm">
+
+                            ★ ★ ★ ★ ★
+
+                        </div>
+
+
+                        <!-- Quote -->
+
+                        <p class="mt-5 text-gray-600
+                                  leading-7">
+
+                            "The doctor explained everything
+                            clearly and made me feel completely
+                            comfortable throughout my cataract
+                            treatment. The entire experience was
+                            excellent."
+
+                        </p>
+
+
+                        <!-- Patient -->
+
+                        <div class="mt-7 flex items-center gap-4">
+
+                            <img
+                                src="{% static 'assets/images/user1.jpg' %}"
+                                alt="Patient"
+                                class="w-12 h-12 rounded-full
+                                       object-cover">
+
+                            <div>
+
+                                <h3 class="font-semibold
+                                           text-gray-900">
+
+                                    Rahul Sharma
+
+                                </h3>
+
+                                <p class="text-sm text-sky-600">
+
+                                    Cataract Surgery
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                        TESTIMONIAL 2
+                ================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="group bg-white
+                                border border-gray-200
+                                rounded-2xl p-7
+                                h-full
+                                hover:-translate-y-1
+                                hover:shadow-xl
+                                hover:border-sky-200
+                                transition duration-300">
+
+                        <div class="flex gap-1
+                                    text-yellow-400 text-sm">
+
+                            ★ ★ ★ ★ ★
+
+                        </div>
+
+
+                        <p class="mt-5 text-gray-600
+                                  leading-7">
+
+                            "Very professional and caring doctor.
+                            I received proper guidance at every
+                            step and my vision has improved
+                            significantly."
+
+                        </p>
+
+
+                        <div class="mt-7 flex items-center gap-4">
+
+                            <img
+                                src="{% static 'assets/images/user2.jpg' %}"
+                                alt="Patient"
+                                class="w-12 h-12 rounded-full
+                                       object-cover">
+
+                            <div>
+
+                                <h3 class="font-semibold
+                                           text-gray-900">
+
+                                    Priya Patel
+
+                                </h3>
+
+                                <p class="text-sm text-sky-600">
+
+                                    Eye Consultation
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                        TESTIMONIAL 3
+                ================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="group bg-white
+                                border border-gray-200
+                                rounded-2xl p-7
+                                h-full
+                                hover:-translate-y-1
+                                hover:shadow-xl
+                                hover:border-sky-200
+                                transition duration-300">
+
+                        <div class="flex gap-1
+                                    text-yellow-400 text-sm">
+
+                            ★ ★ ★ ★ ★
+
+                        </div>
+
+
+                        <p class="mt-5 text-gray-600
+                                  leading-7">
+
+                            "I was nervous before my treatment,
+                            but the doctor and the entire team
+                            were very supportive. Everything was
+                            explained patiently."
+
+                        </p>
+
+
+                        <div class="mt-7 flex items-center gap-4">
+
+                            <img
+                                src="{% static 'assets/images/user3.jpg' %}"
+                                alt="Patient"
+                                class="w-12 h-12 rounded-full
+                                       object-cover">
+
+                            <div>
+
+                                <h3 class="font-semibold
+                                           text-gray-900">
+
+                                    Amit Shah
+
+                                </h3>
+
+                                <p class="text-sm text-sky-600">
+
+                                    LASIK Consultation
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                        TESTIMONIAL 4
+                ================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="group bg-white
+                                border border-gray-200
+                                rounded-2xl p-7
+                                h-full
+                                hover:-translate-y-1
+                                hover:shadow-xl
+                                hover:border-sky-200
+                                transition duration-300">
+
+                        <div class="flex gap-1
+                                    text-yellow-400 text-sm">
+
+                            ★ ★ ★ ★ ★
+
+                        </div>
+
+
+                        <p class="mt-5 text-gray-600
+                                  leading-7">
+
+                            "The consultation was detailed and
+                            reassuring. I really appreciated the
+                            doctor’s patience and personal
+                            attention."
+
+                        </p>
+
+
+                        <div class="mt-7 flex items-center gap-4">
+
+                            <img
+                                src="{% static 'assets/images/user4.jpg' %}"
+                                alt="Patient"
+                                class="w-12 h-12 rounded-full
+                                       object-cover">
+
+                            <div>
+
+                                <h3 class="font-semibold
+                                           text-gray-900">
+
+                                    Neha Mehta
+
+                                </h3>
+
+                                <p class="text-sm text-sky-600">
+
+                                    Retina Consultation
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pagination -->
+
+            <div class="doctor-testimonial-pagination
+                        flex justify-center mt-8">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                Doctor Gallery
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Moments From
+                <span class="text-sky-600">
+                    Our Journey
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                A glimpse into professional events, conferences,
+                clinic life and milestones throughout the journey.
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+                GALLERY SWIPER
+        ====================================== -->
+
+        <div class="swiper doctorGallerySwiper">
+
+            <div class="swiper-wrapper">
+
+
+                <!-- Gallery 1 -->
+                <div class="swiper-slide">
+
+                    <div class="group relative overflow-hidden
+                                rounded-2xl h-72 cursor-pointer">
+
+                        <img
+                            src="{% static 'assets/images/doctor-gallery/gallery1.jpg' %}"
+                            alt="Doctor Conference"
+                            class="w-full h-full object-cover
+                                   transition duration-700
+                                   group-hover:scale-110">
+
+                        <!-- Overlay -->
+
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/70
+                                    via-black/10
+                                    to-transparent
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                        </div>
+
+
+                        <!-- Content -->
+
+                        <div class="absolute bottom-0 left-0 right-0
+                                    p-5
+                                    translate-y-4
+                                    opacity-0
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                            <p class="text-sky-300 text-xs
+                                      uppercase tracking-wider
+                                      font-semibold">
+
+                                Conference
+
+                            </p>
+
+                            <h3 class="mt-1 text-white
+                                       font-semibold text-lg">
+
+                                Ophthalmology Conference
+
+                            </h3>
+
+                        </div>
+
+
+                        <!-- Zoom -->
+
+                        <div class="absolute top-4 right-4
+                                    w-10 h-10 rounded-full
+                                    bg-white/90
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center
+                                    opacity-0
+                                    scale-75
+                                    group-hover:opacity-100
+                                    group-hover:scale-100
+                                    transition duration-300">
+
+                            <i class="fas fa-search-plus"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Gallery 2 -->
+                <div class="swiper-slide">
+
+                    <div class="group relative overflow-hidden
+                                rounded-2xl h-72 cursor-pointer">
+
+                        <img
+                            src="{% static 'assets/images/doctor-gallery/gallery2.jpg' %}"
+                            alt="Doctor Event"
+                            class="w-full h-full object-cover
+                                   transition duration-700
+                                   group-hover:scale-110">
+
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/70
+                                    via-black/10
+                                    to-transparent
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0
+                                    p-5
+                                    translate-y-4
+                                    opacity-0
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                            <p class="text-sky-300 text-xs
+                                      uppercase tracking-wider
+                                      font-semibold">
+
+                                Professional Event
+
+                            </p>
+
+                            <h3 class="mt-1 text-white
+                                       font-semibold text-lg">
+
+                                Medical Event
+
+                            </h3>
+
+                        </div>
+
+                        <div class="absolute top-4 right-4
+                                    w-10 h-10 rounded-full
+                                    bg-white/90
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center
+                                    opacity-0
+                                    scale-75
+                                    group-hover:opacity-100
+                                    group-hover:scale-100
+                                    transition duration-300">
+
+                            <i class="fas fa-search-plus"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Gallery 3 -->
+                <div class="swiper-slide">
+
+                    <div class="group relative overflow-hidden
+                                rounded-2xl h-72 cursor-pointer">
+
+                        <img
+                            src="{% static 'assets/images/doctor-gallery/gallery3.jpg' %}"
+                            alt="Doctor Achievement"
+                            class="w-full h-full object-cover
+                                   transition duration-700
+                                   group-hover:scale-110">
+
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/70
+                                    via-black/10
+                                    to-transparent
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0
+                                    p-5
+                                    translate-y-4
+                                    opacity-0
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                            <p class="text-sky-300 text-xs
+                                      uppercase tracking-wider
+                                      font-semibold">
+
+                                Achievement
+
+                            </p>
+
+                            <h3 class="mt-1 text-white
+                                       font-semibold text-lg">
+
+                                Recognition & Achievement
+
+                            </h3>
+
+                        </div>
+
+                        <div class="absolute top-4 right-4
+                                    w-10 h-10 rounded-full
+                                    bg-white/90
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center
+                                    opacity-0
+                                    scale-75
+                                    group-hover:opacity-100
+                                    group-hover:scale-100
+                                    transition duration-300">
+
+                            <i class="fas fa-search-plus"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Gallery 4 -->
+                <div class="swiper-slide">
+
+                    <div class="group relative overflow-hidden
+                                rounded-2xl h-72 cursor-pointer">
+
+                        <img
+                            src="{% static 'assets/images/doctor-gallery/gallery4.jpg' %}"
+                            alt="Doctor Workshop"
+                            class="w-full h-full object-cover
+                                   transition duration-700
+                                   group-hover:scale-110">
+
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/70
+                                    via-black/10
+                                    to-transparent
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0
+                                    p-5
+                                    translate-y-4
+                                    opacity-0
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                            <p class="text-sky-300 text-xs
+                                      uppercase tracking-wider
+                                      font-semibold">
+
+                                Workshop
+
+                            </p>
+
+                            <h3 class="mt-1 text-white
+                                       font-semibold text-lg">
+
+                                Advanced Eye Care Workshop
+
+                            </h3>
+
+                        </div>
+
+                        <div class="absolute top-4 right-4
+                                    w-10 h-10 rounded-full
+                                    bg-white/90
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center
+                                    opacity-0
+                                    scale-75
+                                    group-hover:opacity-100
+                                    group-hover:scale-100
+                                    transition duration-300">
+
+                            <i class="fas fa-search-plus"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Gallery 5 -->
+                <div class="swiper-slide">
+
+                    <div class="group relative overflow-hidden
+                                rounded-2xl h-72 cursor-pointer">
+
+                        <img
+                            src="{% static 'assets/images/doctor-gallery/gallery5.jpg' %}"
+                            alt="Clinic"
+                            class="w-full h-full object-cover
+                                   transition duration-700
+                                   group-hover:scale-110">
+
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/70
+                                    via-black/10
+                                    to-transparent
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0
+                                    p-5
+                                    translate-y-4
+                                    opacity-0
+                                    group-hover:translate-y-0
+                                    group-hover:opacity-100
+                                    transition duration-300">
+
+                            <p class="text-sky-300 text-xs
+                                      uppercase tracking-wider
+                                      font-semibold">
+
+                                Clinic
+
+                            </p>
+
+                            <h3 class="mt-1 text-white
+                                       font-semibold text-lg">
+
+                                Patient Care
+
+                            </h3>
+
+                        </div>
+
+                        <div class="absolute top-4 right-4
+                                    w-10 h-10 rounded-full
+                                    bg-white/90
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center
+                                    opacity-0
+                                    scale-75
+                                    group-hover:opacity-100
+                                    group-hover:scale-100
+                                    transition duration-300">
+
+                            <i class="fas fa-search-plus"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Pagination -->
+
+            <div class="doctor-gallery-pagination
+                        flex justify-center mt-8">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase tracking-[3px]
+                         text-sm font-semibold">
+
+                Frequently Asked Questions
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Questions Patients
+                <span class="text-sky-600">
+                    Often Ask
+                </span>
+
+            </h2>
+
+            <p class="mt-4 text-gray-600 leading-7">
+
+                Find answers to some common questions about
+                consultations, treatments and eye care.
+
+            </p>
+
+        </div>
+
+
+        <!-- FAQ List -->
+        <div class="space-y-3">
+
+
+            <!-- FAQ 1 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        When should I schedule an eye examination?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        Regular eye examinations can help identify
+                        changes in vision and detect certain eye
+                        conditions at an early stage. Your eye
+                        specialist can recommend an examination
+                        schedule based on your individual needs.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 2 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        Is cataract surgery safe?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        Cataract surgery is a commonly performed
+                        procedure. Your ophthalmologist will assess
+                        your eye health, discuss suitable treatment
+                        options and explain the procedure and
+                        recovery process before surgery.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 3 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        What happens during an eye consultation?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        A consultation may include a discussion
+                        about your symptoms and medical history,
+                        followed by appropriate eye examinations
+                        and diagnostic tests depending on your
+                        condition.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 4 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        Who can consider LASIK surgery?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        Suitability for LASIK depends on several
+                        factors, including eye health, prescription
+                        stability and corneal condition. A detailed
+                        examination is required to determine whether
+                        the procedure is appropriate.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 5 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        How long does an eye consultation take?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        The consultation time can vary depending
+                        on the patient's symptoms, examination
+                        requirements and diagnostic tests.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FAQ 6 -->
+            <div class="faq-item bg-white rounded-xl
+                        border border-gray-200
+                        overflow-hidden">
+
+                <button
+                    type="button"
+                    class="faq-button w-full flex items-center
+                           justify-between gap-5
+                           px-6 py-5 text-left">
+
+                    <span class="font-semibold text-gray-900">
+                        Do I need a follow-up after treatment?
+                    </span>
+
+                    <span class="faq-icon flex-shrink-0
+                                 w-8 h-8 rounded-full
+                                 bg-sky-50 text-sky-600
+                                 flex items-center justify-center
+                                 transition-transform duration-300">
+
+                        <i class="fas fa-plus text-sm"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-content max-h-0 overflow-hidden
+                            transition-all duration-300">
+
+                    <div class="px-6 pb-5 text-gray-600
+                                text-sm leading-7">
+
+                        Follow-up requirements depend on the
+                        treatment or procedure performed. Your
+                        doctor will provide personalized guidance
+                        regarding follow-up visits and care.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="appointment"
+         class="relative overflow-hidden
+                bg-sky-700 py-14 lg:py-16">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32
+                    w-96 h-96 rounded-full
+                    bg-white/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -left-32
+                    w-96 h-96 rounded-full
+                    bg-cyan-300/10 blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-6xl mx-auto
+                px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2
+                    gap-10 items-center">
+
+
+            <!-- =================================
+                    LEFT CONTENT
+            ================================== -->
+
+            <div class="text-white">
+
+                <span class="text-sky-100 uppercase
+                             tracking-[3px]
+                             text-sm font-semibold">
+
+                    Book Your Consultation
+
+                </span>
+
+
+                <h2 class="mt-3 text-3xl lg:text-4xl
+                           font-bold leading-tight">
+
+                    Take the First Step
+                    Towards Better
+                    <span class="text-cyan-200">
+                        Vision
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-5 text-sky-100
+                          leading-7 max-w-xl">
+
+                    Schedule a consultation with our
+                    experienced ophthalmologist and get
+                    personalized guidance for your eye health.
+
+                </p>
+
+
+                <!-- Doctor -->
+
+                <div class="mt-7 flex items-center gap-4">
+
+                    <img
+                        src="{% static 'assets/images/doctor.jpg' %}"
+                        alt="Doctor"
+                        class="w-14 h-14 rounded-full
+                               object-cover
+                               border-2 border-white/40">
+
+                    <div>
+
+                        <h3 class="font-semibold text-white">
+
+                            Dr. Your Doctor Name
+
+                        </h3>
+
+                        <p class="text-sm text-sky-100">
+
+                            Consultant Ophthalmologist
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="mt-7 flex flex-wrap gap-5
+                            text-sm text-sky-100">
+
+                    <a href="tel:+919999999999"
+                       class="flex items-center gap-2
+                              hover:text-white transition">
+
+                        <i class="fas fa-phone"></i>
+
+                        +91 99999 99999
+
+                    </a>
+
+
+                    <a href="mailto:info@cloudeyes.com"
+                       class="flex items-center gap-2
+                              hover:text-white transition">
+
+                        <i class="fas fa-envelope"></i>
+
+                        info@cloudeyes.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                    RIGHT FORM
+            ================================== -->
+
+            <div class="bg-white rounded-2xl
+                        p-6 sm:p-7
+                        shadow-xl">
+
+                <h3 class="text-xl font-bold
+                           text-gray-900">
+
+                    Request an Appointment
+
+                </h3>
+
+                <p class="mt-1 text-sm text-gray-500">
+
+                    Fill in your details and our team
+                    will contact you.
+
+                </p>
+
+
+                <form class="mt-6 space-y-4">
+
+
+                    <!-- Name -->
+
+                    <div>
+
+                        <label class="block text-sm
+                                      font-medium
+                                      text-gray-700 mb-1">
+
+                            Full Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your name"
+                            class="w-full px-4 py-3
+                                   rounded-lg
+                                   border border-gray-200
+                                   focus:border-sky-500
+                                   focus:ring-2
+                                   focus:ring-sky-100
+                                   outline-none
+                                   transition">
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div>
+
+                        <label class="block text-sm
+                                      font-medium
+                                      text-gray-700 mb-1">
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            maxlength="10"
+                            placeholder="Enter phone number"
+                            class="w-full px-4 py-3
+                                   rounded-lg
+                                   border border-gray-200
+                                   focus:border-sky-500
+                                   focus:ring-2
+                                   focus:ring-sky-100
+                                   outline-none
+                                   transition">
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div>
+
+                        <label class="block text-sm
+                                      font-medium
+                                      text-gray-700 mb-1">
+
+                            Email Address
+
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Enter email address"
+                            class="w-full px-4 py-3
+                                   rounded-lg
+                                   border border-gray-200
+                                   focus:border-sky-500
+                                   focus:ring-2
+                                   focus:ring-sky-100
+                                   outline-none
+                                   transition">
+
+                    </div>
+
+
+                    <!-- Concern -->
+
+                    <div>
+
+                        <label class="block text-sm
+                                      font-medium
+                                      text-gray-700 mb-1">
+
+                            Consultation For
+
+                        </label>
+
+                        <select
+                            class="w-full px-4 py-3
+                                   rounded-lg
+                                   border border-gray-200
+                                   focus:border-sky-500
+                                   focus:ring-2
+                                   focus:ring-sky-100
+                                   outline-none
+                                   transition">
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option>
+                                Cataract Consultation
+                            </option>
+
+                            <option>
+                                LASIK Consultation
+                            </option>
+
+                            <option>
+                                Retina Consultation
+                            </option>
+
+                            <option>
+                                Glaucoma Consultation
+                            </option>
+
+                            <option>
+                                General Eye Checkup
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Button -->
+
+                    <button
+                        type="submit"
+                        class="w-full
+                               bg-sky-600
+                               hover:bg-sky-700
+                               text-white
+                               py-3
+                               rounded-lg
+                               font-semibold
+                               transition
+                               hover:shadow-lg">
+
+                        Request Appointment
+
+                    </button>
+
+
+                    <p class="text-xs text-center
+                              text-gray-400">
+
+                        Your information is kept confidential.
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(function (item) {
+
+            const button = item.querySelector(".faq-button");
+            const content = item.querySelector(".faq-content");
+            const icon = item.querySelector(".faq-icon");
+
+            button.addEventListener("click", function () {
+
+                const isOpen =
+                    content.style.maxHeight &&
+                    content.style.maxHeight !== "0px";
+
+
+                /* Close all other FAQs */
+
+                faqItems.forEach(function (otherItem) {
+
+                    const otherContent =
+                        otherItem.querySelector(".faq-content");
+
+                    const otherIcon =
+                        otherItem.querySelector(".faq-icon");
+
+                    otherContent.style.maxHeight = null;
+
+                    otherIcon.classList.remove("rotate-45");
+
+                });
+
+
+                /* Open clicked FAQ */
+
+                if (!isOpen) {
+
+                    content.style.maxHeight =
+                        content.scrollHeight + "px";
+
+                    icon.classList.add("rotate-45");
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        new Swiper(".doctorGallerySwiper", {
+
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+
+            loop: true,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".doctor-gallery-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+
+                640: {
+                    slidesPerView: 2,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                },
+
+                1280: {
+                    slidesPerView: 4,
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        new Swiper(".doctorTestimonialSwiper", {
+
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+
+            loop: true,
+
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".doctor-testimonial-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+
+                640: {
+                    slidesPerView: 1,
+                },
+
+                768: {
+                    slidesPerView: 2,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+{% endblock %}

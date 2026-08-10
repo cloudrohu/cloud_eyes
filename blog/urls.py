@@ -9,6 +9,5 @@ urlpatterns = [
 
     path("",views.blog_list,name="list"),
 
-    path("<slug:slug>/",views.blog_detail,name="detail"),
 
 ]

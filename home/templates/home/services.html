@@ -1,0 +1,1059 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Eye Care Services | Cloud Eyes{% endblock %}
+
+{% block content %}
+
+
+
+<section class="relative overflow-hidden bg-slate-900 pt-28 pb-16">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32
+                    w-96 h-96 rounded-full
+                    bg-sky-500/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -left-32
+                    w-96 h-96 rounded-full
+                    bg-cyan-500/10 blur-3xl">
+        </div>
+
+        <div class="absolute top-1/2 left-1/2
+                    -translate-x-1/2
+                    -translate-y-1/2
+                    w-72 h-72
+                    rounded-full
+                    bg-sky-400/5
+                    blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-5xl mx-auto
+                px-4 text-center">
+
+        <!-- Breadcrumb -->
+
+        <div class="flex justify-center items-center
+                    gap-2 text-sm text-slate-400">
+
+            <a href="{% url 'home' %}"
+               class="hover:text-sky-400 transition">
+
+                Home
+
+            </a>
+
+            <span>/</span>
+
+            <span class="text-white">
+
+                Services
+
+            </span>
+
+        </div>
+
+
+        <!-- Label -->
+
+        <span class="inline-block mt-8
+                     text-sky-400 uppercase
+                     tracking-[3px]
+                     text-sm font-semibold">
+
+            Our Services
+
+        </span>
+
+
+        <!-- Heading -->
+
+        <h1 class="mt-3 text-4xl md:text-5xl
+                   font-bold text-white">
+
+            Complete Care for
+            <span class="text-sky-400">
+
+                Your Eyes
+
+            </span>
+
+        </h1>
+
+
+        <p class="mt-5 max-w-2xl mx-auto
+                  text-slate-300 leading-7">
+
+            Comprehensive eye care services designed
+            to support clear vision and long-term
+            eye health.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2
+                    gap-10 items-center">
+
+
+            <!-- Content -->
+
+            <div>
+
+                <span class="text-sky-600 uppercase
+                             tracking-[3px]
+                             text-sm font-semibold">
+
+                    Expert Eye Care
+
+                </span>
+
+
+                <h2 class="mt-3 text-3xl lg:text-4xl
+                           font-bold text-gray-900">
+
+                    Personalized Treatment.
+                    <span class="text-sky-600">
+
+                        Advanced Care.
+
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-5 text-gray-600
+                          leading-7">
+
+                    At Cloud Eyes, we focus on providing
+                    personalized eye care based on each
+                    patient's individual needs.
+
+                </p>
+
+
+                <p class="mt-4 text-gray-600
+                          leading-7">
+
+                    From routine eye examinations to
+                    specialized treatments, our approach
+                    combines experienced medical care
+                    with modern diagnostic technology.
+
+                </p>
+
+
+                <!-- Points -->
+
+                <div class="mt-7 grid sm:grid-cols-2 gap-4">
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="w-8 h-8 rounded-full
+                                     bg-sky-50 text-sky-600
+                                     flex items-center
+                                     justify-center">
+
+                            <i class="fas fa-check text-xs"></i>
+
+                        </span>
+
+                        <span class="text-sm font-medium
+                                     text-gray-700">
+
+                            Experienced Specialists
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="w-8 h-8 rounded-full
+                                     bg-sky-50 text-sky-600
+                                     flex items-center
+                                     justify-center">
+
+                            <i class="fas fa-check text-xs"></i>
+
+                        </span>
+
+                        <span class="text-sm font-medium
+                                     text-gray-700">
+
+                            Modern Technology
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="w-8 h-8 rounded-full
+                                     bg-sky-50 text-sky-600
+                                     flex items-center
+                                     justify-center">
+
+                            <i class="fas fa-check text-xs"></i>
+
+                        </span>
+
+                        <span class="text-sm font-medium
+                                     text-gray-700">
+
+                            Personalized Care
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="w-8 h-8 rounded-full
+                                     bg-sky-50 text-sky-600
+                                     flex items-center
+                                     justify-center">
+
+                            <i class="fas fa-check text-xs"></i>
+
+                        </span>
+
+                        <span class="text-sm font-medium
+                                     text-gray-700">
+
+                            Patient-Focused Approach
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Image -->
+
+            <div class="relative">
+
+                <div class="rounded-2xl overflow-hidden
+                            shadow-lg">
+
+                    <img
+                        src="{% static 'assets/images/services/services.jpg' %}"
+                        alt="Eye Care Services"
+                        class="w-full h-[360px]
+                               object-cover
+                               hover:scale-105
+                               transition duration-700">
+
+                </div>
+
+
+                <!-- Floating Card -->
+
+                <div class="absolute bottom-5 left-5
+                            bg-white rounded-xl
+                            shadow-lg px-5 py-4">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10
+                                    rounded-lg
+                                    bg-sky-50
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-eye"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-xs text-gray-500">
+
+                                Focused On
+
+                            </p>
+
+                            <p class="font-semibold
+                                      text-gray-900">
+
+                                Better Vision
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8">
+
+
+        <!-- Heading -->
+
+        <div class="text-center
+                    max-w-2xl mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                What We Offer
+
+            </span>
+
+            <h2 class="mt-3 text-3xl lg:text-4xl
+                       font-bold text-gray-900">
+
+                Our Eye Care Services
+
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+
+                Specialized services designed to meet
+                different vision and eye care needs.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Cards -->
+
+        <div class="grid sm:grid-cols-2
+                    lg:grid-cols-3 gap-6">
+
+
+            <!-- Service 1 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/cataract.jpg' %}"
+                        alt="Cataract Care"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-eye"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        Cataract Care
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Evaluation and treatment options
+                        for cataract-related vision changes.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600
+                              group-hover:text-sky-700">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs
+                                  transition-transform
+                                  group-hover:translate-x-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service 2 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/lasik.jpg' %}"
+                        alt="LASIK"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-glasses"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        LASIK & Refractive Care
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Assessment and guidance for
+                        patients considering refractive
+                        vision correction.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600
+                              group-hover:text-sky-700">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs
+                                  group-hover:translate-x-1
+                                  transition-transform"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service 3 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/retina.jpg' %}"
+                        alt="Retina Care"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-circle-dot"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        Retina Care
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Comprehensive evaluation and
+                        management of retinal conditions.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service 4 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/glaucoma.jpg' %}"
+                        alt="Glaucoma Care"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-eye-low-vision"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        Glaucoma Care
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Eye pressure assessment and
+                        personalized glaucoma management.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service 5 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/eye-checkup.jpg' %}"
+                        alt="Eye Examination"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-notes-medical"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        Comprehensive Eye Checkup
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Routine and comprehensive eye
+                        examinations for maintaining
+                        healthy vision.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service 6 -->
+
+            <div class="service-card group
+                        bg-white rounded-2xl
+                        border border-gray-200
+                        overflow-hidden
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:border-sky-200
+                        transition-all duration-300">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="{% static 'assets/images/services/pediatric.jpg' %}"
+                        alt="Pediatric Eye Care"
+                        class="w-full h-52
+                               object-cover
+                               group-hover:scale-105
+                               transition duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="w-11 h-11
+                                rounded-lg
+                                bg-sky-50
+                                text-sky-600
+                                flex items-center
+                                justify-center">
+
+                        <i class="fas fa-child"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 text-xl
+                               font-bold text-gray-900">
+
+                        Pediatric Eye Care
+
+                    </h3>
+
+                    <p class="mt-3 text-sm
+                              text-gray-600
+                              leading-6">
+
+                        Eye care and vision assessment
+                        designed for children.
+
+                    </p>
+
+                    <a href="{% url 'appointment' %}"
+                       class="inline-flex items-center
+                              mt-5 text-sm
+                              font-semibold
+                              text-sky-600">
+
+                        Book Consultation
+
+                        <i class="fas fa-arrow-right
+                                  ml-2 text-xs"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl
+                    mx-auto mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                Why Choose Us
+
+            </span>
+
+            <h2 class="mt-3 text-3xl
+                       lg:text-4xl
+                       font-bold text-gray-900">
+
+                Care Built Around You
+
+            </h2>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2
+                    lg:grid-cols-4 gap-5">
+
+
+            <div class="text-center p-6
+                        rounded-xl
+                        border border-gray-200
+                        hover:border-sky-200
+                        hover:shadow-lg
+                        transition">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full
+                            bg-sky-50
+                            text-sky-600
+                            flex items-center
+                            justify-center">
+
+                    <i class="fas fa-user-doctor"></i>
+
+                </div>
+
+                <h3 class="mt-4 font-bold
+                           text-gray-900">
+
+                    Experienced Care
+
+                </h3>
+
+                <p class="mt-2 text-sm
+                          text-gray-500 leading-6">
+
+                    Patient-focused care from
+                    experienced specialists.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center p-6
+                        rounded-xl
+                        border border-gray-200
+                        hover:border-sky-200
+                        hover:shadow-lg
+                        transition">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full
+                            bg-sky-50
+                            text-sky-600
+                            flex items-center
+                            justify-center">
+
+                    <i class="fas fa-microscope"></i>
+
+                </div>
+
+                <h3 class="mt-4 font-bold
+                           text-gray-900">
+
+                    Modern Technology
+
+                </h3>
+
+                <p class="mt-2 text-sm
+                          text-gray-500 leading-6">
+
+                    Advanced diagnostic technology
+                    for better evaluation.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center p-6
+                        rounded-xl
+                        border border-gray-200
+                        hover:border-sky-200
+                        hover:shadow-lg
+                        transition">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full
+                            bg-sky-50
+                            text-sky-600
+                            flex items-center
+                            justify-center">
+
+                    <i class="fas fa-heart"></i>
+
+                </div>
+
+                <h3 class="mt-4 font-bold
+                           text-gray-900">
+
+                    Personalized Care
+
+                </h3>
+
+                <p class="mt-2 text-sm
+                          text-gray-500 leading-6">
+
+                    Treatment plans tailored to
+                    individual patient needs.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center p-6
+                        rounded-xl
+                        border border-gray-200
+                        hover:border-sky-200
+                        hover:shadow-lg
+                        transition">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full
+                            bg-sky-50
+                            text-sky-600
+                            flex items-center
+                            justify-center">
+
+                    <i class="fas fa-hand-holding-heart"></i>
+
+                </div>
+
+                <h3 class="mt-4 font-bold
+                           text-gray-900">
+
+                    Patient First
+
+                </h3>
+
+                <p class="mt-2 text-sm
+                          text-gray-500 leading-6">
+
+                    Compassionate care throughout
+                    your treatment journey.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="relative overflow-hidden
+                bg-sky-700 py-14">
+
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32
+                    w-80 h-80 rounded-full
+                    bg-white/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -left-32
+                    w-80 h-80 rounded-full
+                    bg-cyan-300/10 blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-4xl mx-auto
+                px-4 text-center">
+
+        <h2 class="text-3xl md:text-4xl
+                   font-bold text-white">
+
+            Take the First Step
+            Towards Better Vision
+
+        </h2>
+
+        <p class="mt-4 text-sky-100">
+
+            Schedule a consultation with our
+            experienced eye care team.
+
+        </p>
+
+
+        <div class="mt-7 flex flex-wrap
+                    justify-center gap-4">
+
+            <a href="{% url 'appointment' %}"
+               class="bg-white text-sky-700
+                      px-7 py-3 rounded-lg
+                      font-semibold
+                      hover:bg-slate-100
+                      transition">
+
+                Book Appointment
+
+            </a>
+
+            <a href="tel:+919999999999"
+               class="border border-white/40
+                      text-white
+                      px-7 py-3 rounded-lg
+                      font-semibold
+                      hover:bg-white/10
+                      transition">
+
+                <i class="fas fa-phone mr-2"></i>
+
+                Call Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

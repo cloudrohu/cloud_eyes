@@ -1,0 +1,486 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us | Cloud Eyes{% endblock %}
+
+{% block content %}
+
+<style>
+    iframe{
+        width: 100%;
+    }
+</style>
+
+<section class="relative overflow-hidden bg-slate-900 pt-28 pb-16">
+
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-sky-500/10 blur-3xl"></div>
+
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+    </div>
+
+    <div class="relative max-w-5xl mx-auto px-4 text-center">
+
+        <div class="flex justify-center items-center gap-2 text-sm text-slate-400">
+
+            <a href="{% url 'home' %}" class="hover:text-sky-400 transition">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span class="text-white">
+                Contact
+            </span>
+
+        </div>
+
+        <span class="inline-block mt-8 text-sky-400 uppercase tracking-[3px] text-sm font-semibold">
+
+            Get In Touch
+
+        </span>
+
+        <h1 class="mt-3 text-4xl md:text-5xl font-bold text-white">
+
+            We're Here to
+            <span class="text-sky-400">
+                Help You
+            </span>
+
+        </h1>
+
+        <p class="mt-5 max-w-2xl mx-auto text-slate-300 leading-7">
+
+            Have a question about your eye health or
+            want to schedule a consultation?
+            Our team is here to assist you.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 lg:py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-5 gap-10">
+
+
+            <div class="lg:col-span-2">
+
+                <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+
+                    Contact Information
+
+                </span>
+
+                <h2 class="mt-3 text-3xl font-bold text-gray-900">
+
+                    Let's Talk About
+                    <span class="text-sky-600">
+                        Your Vision
+                    </span>
+
+                </h2>
+
+                <p class="mt-4 text-gray-600 leading-7">
+
+                    Reach out to us for appointments,
+                    consultations or any questions
+                    regarding our eye care services.
+
+                </p>
+
+
+                <!-- Address -->
+
+                <div class="mt-8 space-y-6">
+
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-gray-900">
+                                Clinic Address
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-500 leading-6">
+
+                                {{settings_obj.address}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+
+                            <i class="fas fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-gray-900">
+                                Phone
+                            </h3>
+
+                            <a href="tel:+91{{settings_obj.phone}}" class="mt-1 block text-sm text-gray-500 hover:text-sky-600 transition">
+
+                                +91 {{settings_obj.phone}}
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0
+                                    w-11 h-11 rounded-lg
+                                    bg-sky-50 text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-gray-900">
+                                Email
+                            </h3>
+
+                            <a href="mailto:info@cloudeyes.com"
+                               class="mt-1 block text-sm
+                                      text-gray-500
+                                      hover:text-sky-600 transition">
+
+                                info@cloudeyes.com
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Timing -->
+
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0
+                                    w-11 h-11 rounded-lg
+                                    bg-sky-50 text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-gray-900">
+                                Clinic Hours
+                            </h3>
+
+                            <p class="mt-1 text-sm
+                                      text-gray-500">
+
+                                Monday – Saturday<br>
+                                9:00 AM – 7:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                    CONTACT FORM
+            ================================== -->
+
+            <div class="lg:col-span-3">
+
+                <div class="bg-slate-50
+                            rounded-2xl
+                            border border-gray-200
+                            p-6 sm:p-8">
+
+                    <h3 class="text-2xl font-bold
+                               text-gray-900">
+
+                        Send Us a Message
+
+                    </h3>
+
+                    <p class="mt-2 text-sm text-gray-500">
+
+                        Fill in your details and our team
+                        will get back to you.
+
+                    </p>
+
+
+                    <form class="mt-7 space-y-5">
+
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Full Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Your name"
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           bg-white
+                                           border border-gray-200
+                                           outline-none
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Phone Number
+
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    maxlength="10"
+                                    placeholder="Your phone number"
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           bg-white
+                                           border border-gray-200
+                                           outline-none
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Email Address
+
+                            </label>
+
+                            <input
+                                type="email"
+                                placeholder="Your email address"
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       bg-white
+                                       border border-gray-200
+                                       outline-none
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition">
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Subject
+
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="How can we help?"
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       bg-white
+                                       border border-gray-200
+                                       outline-none
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition">
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Message
+
+                            </label>
+
+                            <textarea
+                                rows="5"
+                                placeholder="Write your message..."
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       bg-white
+                                       border border-gray-200
+                                       outline-none
+                                       resize-none
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="inline-flex items-center
+                                   justify-center
+                                   bg-sky-600
+                                   hover:bg-sky-700
+                                   text-white
+                                   px-7 py-3
+                                   rounded-lg
+                                   font-semibold
+                                   transition
+                                   hover:shadow-lg">
+
+                            Send Message
+
+                            <i class="fas fa-arrow-right
+                                      ml-2 text-sm"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="pb-14 lg:pb-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-7">
+
+            <span class="text-sky-600 uppercase tracking-[3px] text-sm font-semibold">
+
+                Find Us
+
+            </span>
+
+            <h2 class="mt-2 text-3xl font-bold text-gray-900">
+
+                Visit Our Clinic
+
+            </h2>
+
+        </div>
+
+
+        <div class="w-full h-[350px] overflow-hidden rounded-2xl border border-gray-200">
+
+            {{settings_obj.google_map|safe}}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 bg-sky-700">
+
+    <div class="max-w-5xl mx-auto px-4 text-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
+
+            Ready to Take Care of Your Eyes?
+
+        </h2>
+
+        <p class="mt-4 text-sky-100">
+
+            Book your consultation with our
+            experienced eye care team.
+
+        </p>
+
+        <a href="{% url "appointment" %}" class="inline-block mt-7 bg-white text-sky-700 px-7 py-3 rounded-lg font-semibold hover:bg-slate-100 transition">
+
+            Book Appointment
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,50 +1,65 @@
 {% load static %}
 
 <!-- Header -->
-<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+<header class="fixed top-0 left-0 w-full bg-[{{settings_obj.header_footer_color}}] backdrop-blur-md shadow-md z-50">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="flex items-center justify-between h-20">
 
             <a href="/" class="flex items-center gap-4 shrink-0">
 
-                <img src="{% static 'assets/images/logo.jpg' %}" alt="Cloud Eyes" class="h-16 w-auto object-contain" >
+                <img src="{{settings_obj.logo.url}}" alt="Cloud Eyes" class="h-16 w-auto object-contain" >
 
             </a>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8">
+      <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-7">
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Home</a>
+                <a href="{% url 'home' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Home
+                </a>
 
-                <a href="{% url "about" %}" class="font-medium text-gray-700 hover:text-sky-600 transition">About</a>
+                <a href="{% url 'about' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    About
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Gallery</a>
+                <a href="{% url 'gallery' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Gallery
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Blog</a>
+                <a href="{% url 'blog:list' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Blog
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Doctors</a>
+                <a href="{% url 'doctor_profile' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Doctor Profile
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Services</a>
+                <a href="{% url 'services' %}"  class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Services
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Gallery</a>
+                <a href="{% url 'faqs' %}"  class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    FAQs
+                </a>
 
-                <a href="#" class="font-medium text-gray-700 hover:text-sky-600 transition">Contact</a>
+                <a href="{% url 'contact' %}" class="font-medium text-gray-700 hover:text-sky-600 transition">
+                    Contact
+                </a>
 
             </nav>
 
             <!-- Right Buttons -->
             <div class="hidden lg:flex items-center gap-4">
 
-                <a href="tel:+919876543210"
-                   class="border border-sky-600 text-sky-600 px-5 py-2 rounded-full hover:bg-sky-600 hover:text-white transition">
+                <a href="tel:+91{{settings_obj.phone}}" class="border border-sky-600 text-sky-600 px-5 py-2 rounded-full hover:bg-sky-600 hover:text-white transition">
 
                     Call Now
 
                 </a>
 
-                <a href="#appointment"
-                   class="bg-sky-600 text-white px-6 py-2 rounded-full hover:bg-sky-700 transition">
+                <a href="{% url "appointment" %}" class="bg-sky-600 text-white px-6 py-2 rounded-full hover:bg-sky-700 transition">
 
                     Book Appointment
 
@@ -53,8 +68,7 @@
             </div>
 
             <!-- Mobile Button -->
-            <button id="menu-btn"
-                class="lg:hidden text-sky-700">
+            <button id="menu-btn" class="lg:hidden text-sky-700">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
@@ -87,15 +101,13 @@
 
             <div class="pt-4 border-t">
 
-                <a href="tel:+919876543210"
-                   class="block w-full text-center border border-sky-600 text-sky-600 py-3 rounded-full mb-3">
+                <a href="tel:+91{{settings_obj.phone}}"  class="block w-full text-center border border-sky-600 text-sky-600 py-3 rounded-full mb-3">
 
                     Call Now
 
                 </a>
 
-                <a href="#appointment"
-                   class="block w-full text-center bg-sky-600 text-white py-3 rounded-full">
+                <a href="{% url "appointment" %}" class="block w-full text-center bg-sky-600 text-white py-3 rounded-full">
 
                     Book Appointment
 

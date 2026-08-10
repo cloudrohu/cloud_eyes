@@ -11,26 +11,12 @@
 
                 <a href="/" class="flex items-center gap-3">
 
-                    <img src="{% static 'assets/images/logo.jpg' %}" alt="Cloud Eyes" class="w-auto h-16 rounded-lg object-cover">
-
-                    <div>
-
-                        <h3 class="text-2xl font-bold text-white">
-                            Cloud Eyes
-                        </h3>
-
-                        <p class="text-sm text-sky-400">
-                            Eye Care Clinic
-                        </p>
-
-                    </div>
+                    <img src="{{settings_obj.logo.url}}" alt="{{settings_obj.title}}" class="w-auto h-16 rounded-lg object-cover">
 
                 </a>
 
                 <p class="mt-6 leading-7 text-gray-400">
-                    Providing advanced eye care with experienced specialists,
-                    modern technology, and compassionate treatment for patients
-                    of all ages.
+                    {{settings_obj.footer_text}}
                 </p>
 
             </div>
@@ -44,12 +30,12 @@
 
                 <ul class="space-y-3">
 
-                    <li><a href="#" class="hover:text-sky-400 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-sky-400 transition">About Us</a></li>
-                    <li><a href="#" class="hover:text-sky-400 transition">Services</a></li>
-                    <li><a href="#" class="hover:text-sky-400 transition">Technology</a></li>
-                    <li><a href="#" class="hover:text-sky-400 transition">Gallery</a></li>
-                    <li><a href="#" class="hover:text-sky-400 transition">Contact</a></li>
+                    <li><a href="/" class="hover:text-sky-400 transition">Home</a></li>
+                    <li><a href="{% url "about" %}" class="hover:text-sky-400 transition">About Us</a></li>
+                    <li><a href="{% url "services" %}" class="hover:text-sky-400 transition">Services</a></li>
+                    <li><a href="{% url "doctor_profile" %}" class="hover:text-sky-400 transition">Doctor Profile</a></li>
+                    <li><a href="{% url "gallery" %}" class="hover:text-sky-400 transition">Gallery</a></li>
+                    <li><a href="{% url "contact" %}" class="hover:text-sky-400 transition">Contact</a></li>
 
                 </ul>
 
@@ -87,28 +73,27 @@
                     <div>
                         <p class="text-sky-400 font-medium">Address</p>
                         <p class="mt-1">
-                            123 Eye Care Street,<br>
-                            Ahmedabad, Gujarat - 380001
+                            {{settings_obj.address}}
                         </p>
                     </div>
 
                     <div>
                         <p class="text-sky-400 font-medium">Phone</p>
-                        <a href="tel:+919999999999" class="hover:text-sky-400">
-                            +91 99999 99999
+                        <a href="tel:+91{{settings_obj.phone}}" class="hover:text-sky-400">
+                            +91 {{settings_obj.phone}}
                         </a>
                     </div>
 
                     <div>
                         <p class="text-sky-400 font-medium">Email</p>
                         <a href="mailto:info@cloudeyes.com" class="hover:text-sky-400">
-                            info@cloudeyes.com
+                            {{settings_obj.email}}
                         </a>
                     </div>
 
                     <div>
                         <p class="text-sky-400 font-medium">Working Hours</p>
-                        <p>Mon - Sat : 09:00 AM - 07:00 PM</p>
+                        <p>{{settings_obj.working_days}},  {{settings_obj.working_hours}}</p>
                     </div>
 
                 </div>
@@ -128,7 +113,7 @@
 
                 <!-- Copyright -->
                 <p class="text-sm text-gray-400 text-center lg:text-left">
-                    © 2026 <span class="font-semibold text-white">Cloud Eyes</span>.
+                    © {{settings_obj.copy_right}}
                     All Rights Reserved.
                 </p>
 

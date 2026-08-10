@@ -57,100 +57,77 @@
 
         <div class="swiper-wrapper">
 
-            <!-- Slide 1 -->
-            <div class="swiper-slide bg-gradient-to-r from-sky-50 to-white">
+            {% for slide in hero_sliders %}
+
+            <div class="swiper-slide bg-gradient-to-r {{ slide.background }}">
 
                 <div class="max-w-7xl mx-auto px-6 py-16">
 
                     <div class="grid lg:grid-cols-2 gap-10 items-center">
-
-                        <div class="text-center lg:text-left">
-
-                            <span class="bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold">
-                                Trusted Eye Care
-                            </span>
-
-                            <h1 class="mt-6 text-4xl lg:text-6xl font-bold">
-                                Your Vision,
-                                <span class="text-sky-600">Our Priority</span>
-                            </h1>
-
-                            <p class="mt-6 text-gray-600 text-lg">
-                                Comprehensive Eye Care with Modern Technology.
-                            </p>
-
-                            <div class="mt-8 flex flex-col sm:flex-row gap-4">
-
-                                <a href="#"
-                                    class="bg-sky-600 text-white px-8 py-4 rounded-xl">
-
-                                    Book Appointment
-
-                                </a>
-
-                                <a href="tel:+919999999999"
-                                    class="border border-sky-600 text-sky-600 px-8 py-4 rounded-xl">
-
-                                    Call Now
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        <div>
-
-                            <img
-                                src="{% static 'assets/images/slider1.png' %}"
-                                class="w-full max-w-lg mx-auto">
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide bg-gradient-to-r from-blue-50 to-white">
-
-                <div class="max-w-7xl mx-auto px-6 py-10 lg:py-14">
-
-                    <div class="grid lg:grid-cols-2 gap-8 items-center">
 
                         <!-- Content -->
                         <div class="text-center lg:text-left">
 
-                            <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                                Freedom From
-                                <span class="text-sky-600">Glasses</span>
+                            {% if slide.badge_text %}
+                            <span class="inline-block bg-{{ slide.badge_color }}-100 text-{{ slide.badge_color }}-700 px-4 py-2 rounded-full text-sm font-semibold">
+                                {{ slide.badge_text }}
+                            </span>
+                            {% endif %}
+
+
+                            <h1 class="mt-6 text-4xl lg:text-6xl font-bold">
+
+                                {{ slide.title }}
+
+                                {% if slide.highlighted_text %}
+                                <span class="text-sky-600">
+                                    {{ slide.highlighted_text }}
+                                </span>
+                                {% endif %}
+
                             </h1>
 
-                            <p class="mt-5 text-lg text-gray-600 leading-8 max-w-xl mx-auto lg:mx-0">
-                                Experience safe, advanced and painless LASIK surgery with
-                                cutting-edge technology for clear and natural vision.
+
+                            {% if slide.description %}
+                            <p class="mt-6 text-gray-600 text-lg">
+                                {{ slide.description }}
                             </p>
+                            {% endif %}
+
+
+                            {% if slide.buttons.all %}
 
                             <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 
-                                <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg transition">
-                                    Learn More
-                                </a>
+                                {% for button in slide.buttons.all %}
 
-                                <a href="#appointment" class="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-8 py-3 rounded-lg transition">
-                                    Book Appointment
-                                </a>
+                                    {% if button.is_active %}
+
+                                        <a href="{{ button.url }}"{% if button.open_new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}class="px-8 py-4 rounded-xl transition{% if button.style == 'primary' %}bg-sky-600 hover:bg-sky-700 text-white{% else %}border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white{% endif %}">
+
+                                            {% if button.icon %}
+                                                <i class="{{ button.icon }} mr-2"></i>
+                                            {% endif %}
+
+                                            {{ button.text }}
+
+                                        </a>
+
+                                    {% endif %}
+
+                                {% endfor %}
 
                             </div>
 
+                            {% endif %}
+
                         </div>
+
 
                         <!-- Image -->
                         <div class="flex justify-center">
 
-                            <img src="{% static 'assets/images/slider2.png' %}" alt="LASIK Surgery" class="w-full max-w-md lg:max-w-lg object-contain">
+                            <img src="{{ slide.image.url }}" alt="{{ slide.title }}" class="w-full max-w-lg mx-auto object-contain">
 
                         </div>
 
@@ -160,60 +137,12 @@
 
             </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide bg-gradient-to-r from-cyan-50 to-white">
-
-                <div class="max-w-7xl mx-auto px-6 py-16">
-
-                    <div class="grid lg:grid-cols-2 gap-10 items-center">
-
-                        <div>
-
-                            <span class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
-                                Cataract Surgery
-                            </span>
-
-                            <h1 class="mt-6 text-4xl lg:text-6xl font-bold">
-
-                                Restore Your
-                                <span class="text-sky-600">
-                                    Clear Vision
-                                </span>
-
-                            </h1>
-
-                            <p class="mt-6 text-gray-600 text-lg">
-                                World-Class Cataract Surgery by Expert Doctors.
-                            </p>
-
-                            <a href="#"
-                                class="inline-block mt-8 bg-sky-600 text-white px-8 py-4 rounded-xl">
-
-                                Get Started
-
-                            </a>
-
-                        </div>
-
-                        <div>
-
-                            <img
-                                src="{% static 'assets/images/slider3.png' %}"
-                                class="w-full max-w-lg mx-auto">
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            {% endfor %}
 
         </div>
 
-        <!-- Navigation -->
-        <div class="swiper-button-next"></div>
 
+        <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
     </div>
@@ -1077,8 +1006,7 @@
                     </h3>
 
                     <p class="mt-2 text-gray-600">
-                        123 Eye Care Street,<br>
-                        Ahmedabad, Gujarat - 380001
+                        {{settings_obj.address}}
                     </p>
 
                 </div>
@@ -1089,9 +1017,9 @@
                         Phone Number
                     </h3>
 
-                    <a href="tel:+919999999999"
+                    <a href="tel:+91{{settings_obj.phone}}"
                         class="mt-2 block text-sky-600 font-medium">
-                        +91 99999 99999
+                        +91 {{settings_obj.phone}}
                     </a>
 
                 </div>
@@ -1104,7 +1032,7 @@
 
                     <a href="mailto:info@cloudeyes.com"
                         class="mt-2 block text-sky-600 font-medium">
-                        info@cloudeyes.com
+                        {{settings_obj.email}}
                     </a>
 
                 </div>
@@ -1116,11 +1044,7 @@
                     </h3>
 
                     <p class="mt-2 text-gray-600">
-                        Mon - Sat : 09:00 AM - 07:00 PM
-                    </p>
-
-                    <p class="text-gray-600">
-                        Sunday : Closed
+                        {{settings_obj.working_days}} : {{settings_obj.working_hours}}
                     </p>
 
                 </div>

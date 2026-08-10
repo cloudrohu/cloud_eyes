@@ -31,17 +31,143 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
     'home',
     'blog',
 
 
 ]
+
+JAZZMIN_SETTINGS = {
+
+    # =========================================
+    # BASIC ADMIN BRANDING
+    # =========================================
+
+    
+    "theme": "flatly",
+
+    "dark_mode_theme": "darkly",
+
+
+    "site_title": "Healthcare Admin",
+
+    "site_header": "Healthcare Administration",
+
+    "site_brand": "Healthcare Admin",
+
+    "welcome_sign": "Welcome to your Healthcare Administration Portal",
+
+    "copyright": "Healthcare Administration",
+
+
+
+    "search_model": [
+        "auth.User",
+    ],
+
+
+
+    "show_sidebar": True,
+
+    "navigation_expanded": True,
+
+    "hide_models": [],
+
+    "hide_apps": [],
+
+
+
+    "related_modal_active": True,
+
+    "show_ui_builder": False,
+
+    "changeform_format": "horizontal_tabs",
+
+    "changeform_format_overrides": {
+        "auth.user": "collapsible",
+        "auth.group": "vertical_tabs",
+    },
+
+
+
+    "icons": {
+
+        "auth": "fas fa-users-cog",
+
+        "auth.user": "fas fa-user",
+
+        "auth.Group": "fas fa-users",
+
+        "home.Setting": "fas fa-sliders-h",
+
+        "home.Doctor": "fas fa-user-md",
+
+        "home.Service": "fas fa-stethoscope",
+
+        "home.Appointment": "fas fa-calendar-check",
+
+        "home.Testimonial": "fas fa-comments",
+
+        "home.Gallery": "fas fa-images",
+
+        "home.Blog": "fas fa-newspaper",
+
+    },
+
+
+    "topmenu_links": [
+
+        {
+            "name": "Dashboard",
+            "url": "admin:index",
+            "permissions": ["auth.view_user"],
+        },
+
+        {
+            "name": "View Website",
+            "url": "/",
+            "new_window": True,
+        },
+
+    ],
+
+    "usermenu_links": [
+
+        {
+            "name": "View Website",
+            "url": "/",
+            "new_window": True,
+        },
+
+    ],
+
+
+
+    "show_sidebar": True,
+
+    "navigation_expanded": True,
+
+    "custom_links": {},
+
+
+    "show_ui_builder": False,
+
+}
+
+
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_ALLOW_NONIMAGE_FILES = False 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

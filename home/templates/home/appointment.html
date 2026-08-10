@@ -1,0 +1,756 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Book Appointment | Cloud Eyes{% endblock %}
+
+{% block content %}
+
+
+<section class="relative overflow-hidden bg-slate-900 pt-28 pb-16">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+
+        <div class="absolute -top-32 -right-32
+                    w-96 h-96 rounded-full
+                    bg-sky-500/10 blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -left-32
+                    w-96 h-96 rounded-full
+                    bg-cyan-500/10 blur-3xl">
+        </div>
+
+    </div>
+
+
+    <div class="relative max-w-5xl mx-auto
+                px-4 text-center">
+
+        <!-- Breadcrumb -->
+
+        <div class="flex justify-center items-center
+                    gap-2 text-sm text-slate-400">
+
+            <a href="{% url 'home' %}"
+               class="hover:text-sky-400 transition">
+
+                Home
+
+            </a>
+
+            <span>/</span>
+
+            <span class="text-white">
+                Book Appointment
+            </span>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <span class="inline-block mt-8
+                     text-sky-400 uppercase
+                     tracking-[3px]
+                     text-sm font-semibold">
+
+            Schedule Your Visit
+
+        </span>
+
+
+        <h1 class="mt-3 text-4xl md:text-5xl
+                   font-bold text-white">
+
+            Book Your
+            <span class="text-sky-400">
+                Appointment
+            </span>
+
+        </h1>
+
+
+        <p class="mt-5 max-w-2xl mx-auto
+                  text-slate-300 leading-7">
+
+            Schedule a consultation with our experienced
+            eye care specialists and take the first step
+            towards healthier vision.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<section class="py-14 lg:py-16 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-4
+                sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-5 gap-10">
+
+
+            <!-- =================================
+                    LEFT INFORMATION
+            ================================== -->
+
+            <div class="lg:col-span-2">
+
+                <span class="text-sky-600 uppercase
+                             tracking-[3px]
+                             text-sm font-semibold">
+
+                    Your Visit
+
+                </span>
+
+
+                <h2 class="mt-3 text-3xl
+                           font-bold text-gray-900">
+
+                    We're Here to
+                    <span class="text-sky-600">
+                        Care for Your Vision
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-4 text-gray-600
+                          leading-7">
+
+                    Whether you need a routine eye examination,
+                    cataract consultation or specialized eye
+                    care, our team is ready to assist you.
+
+                </p>
+
+
+                <!-- Doctor -->
+
+                <div class="mt-8 flex items-center gap-4">
+
+                    <img
+                        src="{% static 'assets/images/doctor.jpg' %}"
+                        alt="Doctor"
+                        class="w-16 h-16 rounded-full
+                               object-cover">
+
+                    <div>
+
+                        <h3 class="font-bold text-gray-900">
+
+                            Dr. Your Doctor Name
+
+                        </h3>
+
+                        <p class="text-sm text-sky-600">
+
+                            Consultant Ophthalmologist
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Information -->
+
+                <div class="mt-8 space-y-5">
+
+
+                    <!-- Clinic Hours -->
+
+                    <div class="flex gap-4">
+
+                        <div class="w-11 h-11 flex-shrink-0
+                                    rounded-lg bg-white
+                                    border border-gray-200
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold
+                                       text-gray-900">
+
+                                Clinic Hours
+
+                            </h4>
+
+                            <p class="mt-1 text-sm
+                                      text-gray-500">
+
+                                Monday – Saturday<br>
+                                9:00 AM – 7:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="flex gap-4">
+
+                        <div class="w-11 h-11 flex-shrink-0
+                                    rounded-lg bg-white
+                                    border border-gray-200
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold
+                                       text-gray-900">
+
+                                Call Us
+
+                            </h4>
+
+                            <a href="tel:+919999999999"
+                               class="mt-1 block text-sm
+                                      text-gray-500
+                                      hover:text-sky-600">
+
+                                +91 99999 99999
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="flex gap-4">
+
+                        <div class="w-11 h-11 flex-shrink-0
+                                    rounded-lg bg-white
+                                    border border-gray-200
+                                    text-sky-600
+                                    flex items-center
+                                    justify-center">
+
+                            <i class="fas fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold
+                                       text-gray-900">
+
+                                Clinic Location
+
+                            </h4>
+
+                            <p class="mt-1 text-sm
+                                      text-gray-500">
+
+                                Your Clinic Address,<br>
+                                Ahmedabad, Gujarat
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Note -->
+
+                <div class="mt-8 p-5
+                            bg-sky-50
+                            border-l-4
+                            border-sky-600
+                            rounded-r-xl">
+
+                    <p class="text-sm text-gray-600
+                              leading-6">
+
+                        <strong class="text-gray-900">
+                            Note:
+                        </strong>
+
+                        Appointment requests are subject to
+                        confirmation by our clinic team.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                    APPOINTMENT FORM
+            ================================== -->
+
+            <div class="lg:col-span-3">
+
+                <div class="bg-white rounded-2xl
+                            border border-gray-200
+                            p-6 sm:p-8
+                            shadow-sm">
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold
+                                   text-gray-900">
+
+                            Request an Appointment
+
+                        </h3>
+
+                        <p class="mt-2 text-sm
+                                  text-gray-500">
+
+                            Please provide your details
+                            and preferred appointment time.
+
+                        </p>
+
+                    </div>
+
+
+                    <form class="mt-7 space-y-5">
+
+
+                        <!-- Name + Phone -->
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Full Name
+                                    <span class="text-red-500">*</span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    placeholder="Enter your name"
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           border border-gray-200
+                                           outline-none
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Phone Number
+                                    <span class="text-red-500">*</span>
+
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    required
+                                    maxlength="10"
+                                    placeholder="10 digit number"
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           border border-gray-200
+                                           outline-none
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Email Address
+
+                            </label>
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       border border-gray-200
+                                       outline-none
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition">
+
+                        </div>
+
+
+                        <!-- Service -->
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Consultation For
+                                <span class="text-red-500">*</span>
+
+                            </label>
+
+                            <select
+                                name="service"
+                                required
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       border border-gray-200
+                                       outline-none
+                                       bg-white
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition">
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option>
+                                    General Eye Checkup
+                                </option>
+
+                                <option>
+                                    Cataract Consultation
+                                </option>
+
+                                <option>
+                                    LASIK Consultation
+                                </option>
+
+                                <option>
+                                    Retina Consultation
+                                </option>
+
+                                <option>
+                                    Glaucoma Consultation
+                                </option>
+
+                                <option>
+                                    Pediatric Eye Care
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Date + Time -->
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Preferred Date
+                                    <span class="text-red-500">*</span>
+
+                                </label>
+
+                                <input
+                                    type="date"
+                                    name="date"
+                                    required
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           border border-gray-200
+                                           outline-none
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="block text-sm
+                                              font-medium
+                                              text-gray-700 mb-2">
+
+                                    Preferred Time
+
+                                </label>
+
+                                <select
+                                    name="time"
+                                    class="w-full px-4 py-3
+                                           rounded-lg
+                                           border border-gray-200
+                                           outline-none
+                                           bg-white
+                                           focus:border-sky-500
+                                           focus:ring-2
+                                           focus:ring-sky-100
+                                           transition">
+
+                                    <option value="">
+                                        Select time
+                                    </option>
+
+                                    <option>
+                                        09:00 AM – 11:00 AM
+                                    </option>
+
+                                    <option>
+                                        11:00 AM – 01:00 PM
+                                    </option>
+
+                                    <option>
+                                        02:00 PM – 04:00 PM
+                                    </option>
+
+                                    <option>
+                                        04:00 PM – 07:00 PM
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <div>
+
+                            <label class="block text-sm
+                                          font-medium
+                                          text-gray-700 mb-2">
+
+                                Message / Symptoms
+
+                            </label>
+
+                            <textarea
+                                name="message"
+                                rows="4"
+                                placeholder="Tell us briefly about your concern..."
+                                class="w-full px-4 py-3
+                                       rounded-lg
+                                       border border-gray-200
+                                       outline-none
+                                       resize-none
+                                       focus:border-sky-500
+                                       focus:ring-2
+                                       focus:ring-sky-100
+                                       transition"></textarea>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="w-full
+                                   bg-sky-600
+                                   hover:bg-sky-700
+                                   text-white
+                                   py-3.5
+                                   rounded-lg
+                                   font-semibold
+                                   transition
+                                   hover:shadow-lg">
+
+                            Request Appointment
+
+                            <i class="fas fa-arrow-right ml-2"></i>
+
+                        </button>
+
+
+                        <p class="text-xs text-center
+                                  text-gray-400">
+
+                            By submitting this form, you agree
+                            to be contacted regarding your request.
+
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-14 bg-white">
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <div class="text-center mb-10">
+
+            <span class="text-sky-600 uppercase
+                         tracking-[3px]
+                         text-sm font-semibold">
+
+                Simple Process
+
+            </span>
+
+            <h2 class="mt-2 text-3xl
+                       font-bold text-gray-900">
+
+                Your Appointment in 3 Steps
+
+            </h2>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+
+            <div class="text-center">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full bg-sky-600
+                            text-white flex items-center
+                            justify-center font-bold">
+
+                    1
+
+                </div>
+
+                <h3 class="mt-4 font-bold text-gray-900">
+
+                    Request
+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+
+                    Submit your appointment details
+                    through the form.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full bg-sky-600
+                            text-white flex items-center
+                            justify-center font-bold">
+
+                    2
+
+                </div>
+
+                <h3 class="mt-4 font-bold text-gray-900">
+
+                    Confirmation
+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+
+                    Our team will contact you to
+                    confirm your appointment.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+                <div class="w-12 h-12 mx-auto
+                            rounded-full bg-sky-600
+                            text-white flex items-center
+                            justify-center font-bold">
+
+                    3
+
+                </div>
+
+                <h3 class="mt-4 font-bold text-gray-900">
+
+                    Consultation
+
+                </h3>
+
+                <p class="mt-2 text-sm text-gray-500">
+
+                    Visit our clinic at your confirmed
+                    appointment time.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
