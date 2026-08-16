@@ -348,75 +348,59 @@ class AboutAdmin(admin.ModelAdmin):
 
     fieldsets = (
 
-        ("Main About", {
+        ("🏠 Main About", {
             "fields": (
                 "title",
                 "subtitle",
                 "content",
-                "read_legacy",
+                "image",
             )
         }),
 
-        ("About Details", {
+        ("👥 Who We Are", {
             "fields": (
-                "about_title",
-                "about_subtitle",
-                "about_content",
-            )
-        }),
-
-        ("Mission & Vision", {
-            "fields": (
-                "mission_title",
-                "mission_content",
-                "vision_title",
-                "vision_content",
-            )
-        }),
-
-        ("SEO Content", {
-            "fields": (
-                "seo_title",
-                "seo_description",
+                "who_we_are_title",
+                "who_we_are_subtitle",
+                "who_we_are_description",
             )
         }),
 
 
-        ("Background & Status", {
+        ("🎯 Mission & Vision", {
             "fields": (
+                "our_mission_title",
+                "our_mission",
+                "our_vision_title",
+                "our_vision",
+            )
+        }),
+
+        ("💼 Looking To", {
+            "fields": (
+                "looking_to_title",
+                "looking_to_description",
+                "looking_to_button_text",
+                "looking_to_button_link",
+            )
+        }),
+
+        ("🌐 SEO", {
+            "fields": (
+                "meta_title",
+                "meta_description",
+                "meta_keywords",
+            )
+        }),
+
+        ("⚙️ Background & Status", {
+            "fields": (
+                "home_bg",
+                "search_bg",
                 "is_active",
                 "created_at",
                 "updated_at",
             )
         }),
-
-        ("Statistics", {
-            "fields": (
-                "years_of_experience",
-                "happy_families",
-            )
-        }),
-
-          ("About Us Hero", {
-            "fields": (
-                "hero_title",
-                "hero_highlight",
-                "hero_subtitle",
-                "hero_description",
-                "hero_background",
-                "button_one_text",
-                "button_one_link",
-                "button_two_text",
-                "button_two_link",
-            )
-        }),
+    )
 
 
-        ("Images", {
-            "fields": (
-                "right_image1",
-                "right_image2",
-            )
-        }),
-
-        )

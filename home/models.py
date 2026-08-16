@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.safestring import mark_safe
-from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingField # Correct
+
 
 
 
@@ -192,58 +193,43 @@ class HeroSliderButton(models.Model):
 
 class About(models.Model):
 
-    ################ HOME CONTENT ################
-    title = models.CharField(max_length=200,)
+    search_bg = models.ImageField(upload_to='about/backgrounds/',blank=True, null=True,help_text="Background image for the top search banner (optional)")
+    home_bg = models.ImageField(upload_to='about/backgrounds/',blank=True, null=True,help_text="Background image for home about section")
+
+    title = models.CharField(max_length=200, help_text="Main heading (e.g., 'About Makaan Hub')")
     subtitle = models.CharField(max_length=300, blank=True, null=True, help_text="Subtitle or tagline")
-    content = RichTextUploadingField(blank=True, null=True,)
-    read_legacy = RichTextUploadingField(blank=True, null=True,)
+    content = RichTextUploadingField(blank=True, null=True, help_text="Detailed About Us content with formatting")
     image = models.ImageField(upload_to='about/', blank=True, null=True, help_text="Main image for About section")
 
-    ################ ABOUT CONTENT ################
-    about_title = models.CharField(max_length=200, blank=True, null=True,)
-    about_subtitle = models.CharField(max_length=300, blank=True, null=True, help_text="Subtitle or tagline")
-    about_content = RichTextUploadingField(blank=True, null=True,)
 
-    ################ MISSION OR VISION CONTENT ################
-    mission_title = models.CharField(max_length=200, blank=True, null=True)
-    mission_content = RichTextUploadingField(blank=True, null=True,)
-    vision_title = models.CharField(max_length=200, blank=True, null=True)
-    vision_content = RichTextUploadingField(blank=True, null=True,)
+    who_we_are_title = models.CharField(max_length=200, default="Who We Are")
+    who_we_are_subtitle = models.CharField(max_length=300, blank=True, null=True)
+    who_we_are_description = RichTextUploadingField(blank=True, null=True, help_text="Description about company identity")
 
-    ################ ABOUT HERO CONTENT ################
+ 
+    our_mission_title = models.CharField(blank=True, null=True,max_length=200, default="Our Mission")
+    our_mission = RichTextUploadingField(blank=True, null=True)
+    our_vision_title = models.CharField(blank=True, null=True,max_length=200, default="Our Vision")
+    our_vision = RichTextUploadingField(blank=True, null=True)
 
-    hero_title = models.CharField(max_length=250,blank=True,null=True,help_text="Main Hero Heading")
-    hero_highlight = models.CharField(max_length=150,blank=True,null=True,help_text="Highlighted text in Hero Title")
-    hero_subtitle = models.CharField(max_length=200,blank=True,null=True,help_text="Small heading above Hero Title")
-    hero_description = RichTextUploadingField(blank=True,null=True,help_text="Hero description")
-    hero_background = models.ImageField(upload_to='about/hero/',blank=True,null=True,help_text="Hero Background Image")
-    button_one_text = models.CharField(max_length=50,default="Explore Legacy",blank=True,null=True)
+    looking_to_title = models.CharField(blank=True, null=True,max_length=200, help_text="Title for 'Looking To...' section")
+    looking_to_description = RichTextUploadingField(blank=True, null=True)
+    looking_to_button_text = models.CharField(max_length=50, default="Contact Us", help_text="Call-to-action button text")
+    looking_to_button_link = models.URLField(blank=True, null=True, help_text="Button link (e.g., contact page)")
 
-    button_one_link = models.CharField(max_length=255,blank=True,null=True)
-
-    button_two_text = models.CharField(max_length=50,default="View Projects",blank=True,null=True)
-
-    button_two_link = models.CharField(max_length=255,blank=True,null=True)
-
-    ################ SEO  CONTENT ################
-    seo_title = models.CharField(max_length=200, blank=True, null=True)
-    seo_description = models.TextField(blank=True, null=True)
+    meta_title = models.CharField(max_length=255, blank=True, null=True, help_text="SEO meta title")
+    meta_description = models.TextField(blank=True, null=True, help_text="SEO meta description")
+    meta_keywords = models.TextField(blank=True, null=True, help_text="SEO keywords separated by commas")
 
     is_active = models.BooleanField(default=True, help_text="If disabled, this section won't appear on site")
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    ################ IMAGES  CONTENT ################
-    right_image1 = models.ImageField(upload_to='about/', blank=True, null=True, help_text="Main image for About section")
-    right_image2 = models.ImageField(upload_to='about/', blank=True, null=True, help_text="Main image for About section")
-
-    ################ STAT  CONTENT ################
-    years_of_experience = models.CharField(max_length=100, blank=True, null=True)
-    happy_families = models.CharField(max_length=100, blank=True, null=True)
-
     class Meta:
-        verbose_name_plural = "About Section"
+        verbose_name_plural = "2. About Section"
         ordering = ['-created_at']
 
     def __str__(self):
         return self.title
+
+
