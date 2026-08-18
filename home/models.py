@@ -11,6 +11,8 @@ class Setting(models.Model):
 
     logo = models.ImageField(upload_to='settings/',blank=True,null=True)
 
+    why_choose_img = models.ImageField(upload_to='settings/',blank=True,null=True)
+
     favicon = models.ImageField(upload_to='settings/',blank=True,null=True)
 
     offer_img = models.ImageField(upload_to='settings/',blank=True,null=True)
@@ -232,4 +234,27 @@ class About(models.Model):
     def __str__(self):
         return self.title
 
+class USP(models.Model):
+    title =  models.CharField(max_length=300,)
+    description =  models.CharField(max_length=1000,)
 
+    def __str__(self):
+        return self.title
+
+class why_choose(models.Model):
+    title =  models.CharField(max_length=300,)
+    description =  models.CharField(max_length=1000,)
+    icon =  models.CharField(max_length=1000,)
+
+
+    def __str__(self):
+        return self.title
+
+class technologies(models.Model):
+    title =  models.CharField(max_length=300,)
+    description =  models.CharField(max_length=1000,)
+    image =  models.ImageField()
+
+
+    def __str__(self):
+        return self.title        

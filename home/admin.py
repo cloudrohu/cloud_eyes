@@ -40,6 +40,8 @@ class SettingAdmin(admin.ModelAdmin):
                     'logo',
                     'favicon',
                     'offer_img',
+                    'why_choose_img',
+
                 )
             }
         ),
@@ -404,3 +406,50 @@ class AboutAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(technologies)
+class technologiesAdmin(admin.ModelAdmin):
+
+    fieldsets = (
+
+        ("Main", {
+            "fields": (
+                "title",
+                "description",
+                "image",
+
+            )
+        }),
+
+    )
+
+
+@admin.register(why_choose)
+class why_chooseAdmin(admin.ModelAdmin):
+
+    fieldsets = (
+
+        ("Main", {
+            "fields": (
+                "title",
+                "description",
+                "icon",
+
+            )
+        }),
+
+    )
+
+
+@admin.register(USP)
+class USPAdmin(admin.ModelAdmin):
+
+    fieldsets = (
+
+        ("Main", {
+            "fields": (
+                "title",
+                "description",
+            )
+        }),
+
+    )

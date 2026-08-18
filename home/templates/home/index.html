@@ -158,13 +158,10 @@
             <!-- Image -->
             <div class="relative">
 
-                <img src="{% static 'assets/images/about.jpg' %}"
-                    alt="About Cloud Eyes"
-                    class="rounded-2xl w-full h-[380px] lg:h-[450px] object-cover shadow-lg">
+                <img src="{{about_us.image.url}}" alt="About {{settings_obj.site_name}}" class="rounded-2xl w-full h-[380px] lg:h-[450px] object-cover shadow-lg">
 
                 <!-- Floating Card -->
-                <div
-                    class="absolute -bottom-5 left-6 bg-white rounded-xl shadow-xl px-6 py-4 border">
+                <div class="absolute -bottom-5 left-6 bg-white rounded-xl shadow-xl px-6 py-4 border">
 
                     <h3 class="text-3xl font-bold text-sky-600">
                         15+
@@ -183,14 +180,13 @@
 
                 <span class="text-sky-600 font-semibold uppercase tracking-widest text-sm">
 
-                    ABOUT CLOUD EYES
+                    ABOUT {{settings_obj.site_name}}
 
                 </span>
 
                 <h2 class="mt-3 text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
 
-                    Better Vision Begins
-                    With Better Care.
+                    {{about_us.subtitle}}
 
                 </h2>
 
@@ -198,11 +194,7 @@
 
                 <p class="mt-5 text-gray-600 leading-8">
 
-                    At Cloud Eyes, we provide comprehensive eye care with
-                    advanced diagnostic technology and experienced specialists.
-                    From routine eye checkups to cataract, LASIK, retina and
-                    glaucoma treatment, we are committed to protecting your
-                    vision with compassionate care.
+                    {{about_us.content|safe}}
 
                 </p>
 
@@ -306,13 +298,13 @@
                 <!-- Buttons -->
                 <div class="mt-8 flex flex-wrap gap-4">
 
-                    <a href="#" class="bg-sky-600 hover:bg-sky-700 text-white px-7 py-3 rounded-lg transition">
+                    <a href="{% url "about" %}" class="bg-sky-600 hover:bg-sky-700 text-white px-7 py-3 rounded-lg transition">
 
                         Read More
 
                     </a>
 
-                    <a href="tel:+919999999999"  class="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-7 py-3 rounded-lg transition">
+                    <a href="tel:+91{{settings_obj.phone}}"  class="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-7 py-3 rounded-lg transition">
 
                         Contact Us
 
@@ -328,6 +320,7 @@
 </section>
 
 <!-- USP SECTION START HERE -->
+{% if usp %}
 <section class="py-14 bg-white">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,55 +346,28 @@
         <!-- USP Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
 
-            <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Experienced Eye Specialists</h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    Highly qualified ophthalmologists with years of expertise.
-                </p>
-            </div>
 
+          {% for rs in usp %}
             <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Advanced Technology</h3>
+                <h3 class="font-semibold text-gray-900">{{rs.title}}</h3>
                 <p class="mt-2 text-gray-600 text-sm">
-                    Latest diagnostic and surgical equipment for precise treatment.
+                    {{rs.description}}
                 </p>
             </div>
-
-            <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Comprehensive Eye Care</h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    Complete eye care services under one roof.
-                </p>
-            </div>
-
-            <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Personalized Treatment</h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    Customized care plans designed for every patient.
-                </p>
-            </div>
-
-            <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Safe & Hygienic Environment</h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    Clean, safe, and comfortable clinical facilities.
-                </p>
-            </div>
-
-            <div class="border-b border-gray-200 pb-3">
-                <h3 class="font-semibold text-gray-900">Easy Appointment Booking</h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    Quick scheduling with minimal waiting time.
-                </p>
-            </div>
+          {% endfor %}
 
         </div>
 
     </div>
 
 </section>
+{% else %}
+{% endif %}
 
 <!-- WHY CHOOSE START HERE -->
+ 
+{% if why_choose %}
+
 <section class="py-14 bg-sky-50">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,58 +395,27 @@
 
             <!-- Image -->
             <div>
+                {% if settings_obj.why_choose_img %}
+                <img src="{{ settings_obj.why_choose_img.url }}" alt="Why Choose Us" class="w-full rounded-xl shadow-md object-cover">
+                {% else %}
                 <img src="{% static 'assets/images/why-choose-us.jpg' %}" alt="Why Choose Us" class="w-full rounded-xl shadow-md object-cover">
+                {% endif %}
+                
             </div>
 
             <!-- Features -->
             <div class="space-y-5 max-h-[420px] overflow-y-auto pr-3 custom-scroll">
 
-                <div class="border-l-4 border-sky-600 pl-5">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Experienced Eye Specialists
-                    </h3>
-                    <p class="mt-2 text-gray-600">
-                        Our skilled ophthalmologists provide personalized care using years of clinical expertise.
-                    </p>
-                </div>
-
-                <div class="border-l-4 border-sky-600 pl-5">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Advanced Diagnostic Technology
-                    </h3>
-                    <p class="mt-2 text-gray-600">
-                        Equipped with modern technology for accurate diagnosis and effective treatment.
-                    </p>
-                </div>
-
-                <div class="border-l-4 border-sky-600 pl-5">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Patient-Centered Care
-                    </h3>
-                    <p class="mt-2 text-gray-600">
-                        Every patient receives personalized attention in a comfortable and caring environment.
-                    </p>
-                </div>
-
-                <div class="border-l-4 border-sky-600 pl-5">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Affordable & Transparent Pricing
-                    </h3>
-                    <p class="mt-2 text-gray-600">
-                        Quality eye care with clear pricing and no hidden charges.
-                    </p>
-                </div>
-
-                
-
-                <div class="border-l-4 border-sky-600 pl-5">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Advanced Diagnostic Technology
-                    </h3>
-                    <p class="mt-2 text-gray-600">
-                        Equipped with modern technology for accurate diagnosis and effective treatment.
-                    </p>
-                </div>
+                {% for rs in why_choose %}
+                    <div class="border-l-4 border-sky-600 pl-5">
+                        <h3 class="text-xl font-semibold text-gray-900">
+                            {{rs.title}}
+                        </h3>
+                        <p class="mt-2 text-gray-600">
+                             {{rs.description}}
+                        </p>
+                    </div>
+                {% endfor %}
 
             </div>
 
@@ -489,8 +424,10 @@
     </div>
 
 </section>
+{% else %}
+{% endif %}
 
-<!-- ABOUT DOCTOR START HERE -->                                                                                                            
+<!-- ABOUT DOCTOR START HERE -->
 <section class="py-14 bg-white">
 
     <div class="max-w-6xl mx-auto px-4">
@@ -562,7 +499,8 @@
 
 </section>
 
-<!-- SERVICES START HERE -->                                                                                                            
+<!-- SERVICES START HERE -->  
+{% if our_technologies %}
 <section class="py-14 bg-slate-50">
 
     <div class="max-w-7xl mx-auto px-4">
@@ -591,22 +529,21 @@
             <div class="swiper-wrapper">
 
                 <!-- Repeat this card -->
+                {% for rs in our_technologies %}
                 <div class="swiper-slide">
 
                     <div class="bg-white rounded-xl overflow-hidden shadow">
 
-                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
-                             class="w-full h-56 object-cover">
+                        <img src="{{rs.image.url}}" class="w-full h-56 object-cover">
 
                         <div class="p-5">
 
                             <h3 class="text-xl font-semibold">
-                                OCT Scan
+                                {{rs.title}}
                             </h3>
 
                             <p class="mt-3 text-gray-600">
-                                High-resolution retinal imaging for
-                                accurate diagnosis.
+                                {{rs.description}}
                             </p>
 
                         </div>
@@ -614,106 +551,8 @@
                     </div>
 
                 </div>
+                {% endfor %}
                 
-                <div class="swiper-slide">
-
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
-
-                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
-                             class="w-full h-56 object-cover">
-
-                        <div class="p-5">
-
-                            <h3 class="text-xl font-semibold">
-                                OCT Scan
-                            </h3>
-
-                            <p class="mt-3 text-gray-600">
-                                High-resolution retinal imaging for
-                                accurate diagnosis.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-                <div class="swiper-slide">
-
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
-
-                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
-                             class="w-full h-56 object-cover">
-
-                        <div class="p-5">
-
-                            <h3 class="text-xl font-semibold">
-                                OCT Scan
-                            </h3>
-
-                            <p class="mt-3 text-gray-600">
-                                High-resolution retinal imaging for
-                                accurate diagnosis.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-                <div class="swiper-slide">
-
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
-
-                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
-                             class="w-full h-56 object-cover">
-
-                        <div class="p-5">
-
-                            <h3 class="text-xl font-semibold">
-                                OCT Scan
-                            </h3>
-
-                            <p class="mt-3 text-gray-600">
-                                High-resolution retinal imaging for
-                                accurate diagnosis.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-                <div class="swiper-slide">
-
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
-
-                        <img src="{% static 'assets/images/technology/oct.jpg' %}"
-                             class="w-full h-56 object-cover">
-
-                        <div class="p-5">
-
-                            <h3 class="text-xl font-semibold">
-                                OCT Scan
-                            </h3>
-
-                            <p class="mt-3 text-gray-600">
-                                High-resolution retinal imaging for
-                                accurate diagnosis.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
             <div class="swiper-pagination"></div>
@@ -724,8 +563,12 @@
     </div>
 
 </section>
+{% else %}
+{% endif %}
 
-<!-- SERVICES START HERE -->                                                                                                            
+
+<!-- ACHIVEMENT START HERE -->   
+{% if our_technologies %}
 <section class="py-12 bg-sky-700">
 
     <div class="max-w-7xl mx-auto px-4">
@@ -795,6 +638,8 @@
     </div>
 
 </section>
+{% else %}
+{% endif %}
 
 <!-- TESTIMONIAL START HERE -->                                                                                                            
 <section class="py-16 bg-slate-50">
@@ -872,7 +717,6 @@
     </div>
 
 </section>
-
 
 <!-- APPOINTMENT START HERE -->                                                                                                            
 <section id="appointment" class="py-16 bg-sky-700">

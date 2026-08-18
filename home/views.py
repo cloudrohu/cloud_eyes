@@ -1,15 +1,19 @@
 from django.shortcuts import render
 
 from .models import (
-    HeroSlider,Setting,About
+    HeroSlider,Setting,About,USP,why_choose,technologies
 )
 
 
 def home(request):
 
     hero_sliders = HeroSlider.objects.filter(is_active=True).prefetch_related("buttons")
-
+    about_us = About.objects.first()
     settings_obj = Setting.objects.first()
+    usp = USP.objects.all()[:6]
+    why_choose_data = why_choose.objects.all()[:6]
+    our_technologies = technologies.objects.all()[:6]
+
 
     return render(
         request,
@@ -17,6 +21,11 @@ def home(request):
         {
             "hero_sliders": hero_sliders,
             "settings_obj": settings_obj,
+            "about_us": about_us,
+            "usp": usp,
+            "why_choose": why_choose_data,
+            "our_technologies": our_technologies,
+
         }
     )
 
