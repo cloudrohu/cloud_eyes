@@ -51,7 +51,7 @@
             <!-- Image -->
             <div data-aos="fade-right" class="relative">
 
-                <img src="assets/images/about-clinic.jpg" alt="{{settings_obj.site_name}}" class="rounded-3xl shadow-2xl w-full">
+                <img src="{{about_us.image.url}}" class="rounded-3xl shadow-2xl w-full">
 
                 <!-- Floating Card -->
                 <div class="absolute -bottom-6 -right-6 bg-sky-600 text-white rounded-2xl p-6 shadow-2xl hover:scale-105 transition duration-500">
@@ -79,7 +79,7 @@
                 </h2>
 
                 <p class="text-slate-600 mt-6 leading-8">
-                    {{settings_obj.site_name}} 
+                    {{about_us.who_we_are_description|safe}}
                 </p>
 
                 <!-- Features -->
@@ -216,14 +216,11 @@
                 </div>
 
                 <h3 class="text-3xl font-bold text-slate-900 mt-6">
-                    Our Mission
+                    {{about_us.our_mission_title}}
                 </h3>
 
                 <p class="mt-5 text-slate-600 leading-8">
-                    To provide accessible, advanced, and compassionate eye care
-                    through experienced specialists, modern technology, and
-                    personalized treatment that helps every patient enjoy a
-                    lifetime of healthy vision.
+                    {{about_us.our_mission|safe}}
                 </p>
 
             </div>
@@ -241,14 +238,12 @@
                     </div>
 
                     <h3 class="text-3xl font-bold mt-6">
-                        Our Vision
+                    {{about_us.our_vision_title}}
                     </h3>
 
                     <p class="mt-5 text-sky-100 leading-8">
-                        To become the most trusted eye care center by combining
-                        clinical excellence, innovation, and patient-first care,
-                        ensuring brighter vision and healthier lives for every
-                        community we serve.
+                        {{about_us.our_vision|safe}}
+
                     </p>
 
                 </div>

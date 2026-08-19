@@ -258,3 +258,13 @@ class technologies(models.Model):
 
     def __str__(self):
         return self.title        
+
+class stats(models.Model):
+    Title =  models.CharField(max_length=300,)
+    Value =  models.CharField(max_length=1000,)
+    Suffix =  models.CharField(max_length=5,)
+
+
+    def __str__(self):
+        return self.Title
+

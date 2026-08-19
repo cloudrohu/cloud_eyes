@@ -453,3 +453,19 @@ class USPAdmin(admin.ModelAdmin):
         }),
 
     )
+
+@admin.register(stats)
+class statsAdmin(admin.ModelAdmin):
+
+    fieldsets = (
+
+        ("Main", {
+            "fields": (
+                "Title",
+                "Value",
+                "Suffix",
+
+            )
+        }),
+
+    )

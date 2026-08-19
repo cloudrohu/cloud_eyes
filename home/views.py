@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import (
-    HeroSlider,Setting,About,USP,why_choose,technologies
+    HeroSlider,Setting,About,USP,why_choose,technologies,stats
 )
 
 
@@ -13,6 +13,8 @@ def home(request):
     usp = USP.objects.all()[:6]
     why_choose_data = why_choose.objects.all()[:6]
     our_technologies = technologies.objects.all()[:6]
+    stats_value = stats.objects.all()[:4]
+
 
 
     return render(
@@ -25,6 +27,8 @@ def home(request):
             "usp": usp,
             "why_choose": why_choose_data,
             "our_technologies": our_technologies,
+            "stats_value": stats_value,
+
 
         }
     )
