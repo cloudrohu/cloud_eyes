@@ -469,3 +469,20 @@ class statsAdmin(admin.ModelAdmin):
         }),
 
     )
+
+@admin.register(technologies)
+class galleryAdmin(admin.ModelAdmin):
+
+    fieldsets = (
+
+        ("Main", {
+            "fields": (
+                "title",
+                "description",
+                "image",
+
+            )
+        }),
+
+    )
+

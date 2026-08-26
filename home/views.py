@@ -38,6 +38,8 @@ def about(request):
 
     settings_obj = Setting.objects.first()
     about_us = About.objects.first()
+    why_choose_data = why_choose.objects.all()[:6]
+
 
 
     return render(
@@ -46,6 +48,9 @@ def about(request):
         {
             "settings_obj": settings_obj,
             "about_us": about_us,
+            "why_choose": why_choose_data,
+
+
 
         }
     )
